@@ -5,12 +5,12 @@
 **Description:** Plan your own local Brew Hop!  
 **APIs:** Google Maps, breweryDB, untappd, routeXL  
 
-### Goals:
+## Goals:
   1. User friendly
   2. Social sharing
   3. Search previous trips by user, trip name, date, location
 
-### Future Potential:
+## Future Potential:
   1. For foodies
   2. Road trip
   3. Uber integration
@@ -18,7 +18,7 @@
   5. Timed brewery visits
   6. Location based info while on trip
 
-### Tasks:
+## Tasks:
   1. Finalize features
       1. Landing page
           * Jumbotron header with logo
