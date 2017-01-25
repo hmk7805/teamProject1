@@ -29,7 +29,7 @@ try {
 
 <?php
 
-    require('Pintlabs/Services/Brewerydb.php');
+    require('Pintlabs/Service/Brewerydb.php');
 
     header('Content-Type: application/json');
 
