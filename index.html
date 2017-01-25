@@ -1,9 +1,462 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="wow-animation">
 <head>
-	<title></title>
+    <!-- Site Title -->
+    <title>BrewVentures</title>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-color.css"> 
+  
 </head>
-<body>
+<body class="bg-image">
+
+<div id="page-preloader">
+  <div class="contpre">
+    <div class="loader">
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+    </div>
+  </div>
+</div> 
+
+<!-- The Main Wrapper -->
+<div class="main-wrapper">
+
+  <!--/////////////////////////// HEADER \\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  <header  class="main-header">
+    <!-- Nav -->
+    <div class="k-nav all-light">
+      <div class="k-nav-toggle"><span></span></div>
+      <div class="k-nav-outside">
+        <div class="k-nav-inside">
+          <a href="./">
+            <img src="img/brewventureslogo.png" width="200" height="200" alt=""/>
+          </a>
+          <ul class="k-nav-links">
+            <li class="active"><a href="#" data-nav-to="#home"><span>HOME</span></a></li>
+            <li><a data-nav-to="#two" href="#"><span>FEATURES</span></a></li>
+            <li><a data-nav-to="#three" href="#"><span>CREATE</span></a></li>
+            <li><a data-nav-to="#four" href="#"><span>PREVIOUS TRIPS</span></a></li>
+            <li><a data-nav-to="#five" href="#"><span>ABOUT</span></a></li>
+            <li><a data-nav-to="#six" href="#"><span>CONTACT</span></a></li>
+          </ul>
+          <hr class="divider hide-md">
+          <div class="text-left text-md-right pl-20 pl-md-0">
+            <h6 class="small">EMAIL US NOW</h6>
+            <h5><a href="#"><span class="icon icon-md fa fa-share text-middle"></span> <span>info@brewventures.com</span></a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+     
+  <!--/////////////////////////// CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  <main class="main-container">
+
+    <!--========== Header section ==========-->
+    <section id="home" data-vide-bg="video/background-video">
+      <div class="first-section all-light">
+        <div class="container text-md-left">
+          <div class="row">
+            <div class="col-md-9 parallax-text">
+              <h2 class="ls-50">Creat your own</h2>                
+              <h1 class="ls-50">Custom Curated<br class="hide show-md-block">Brewery Tour</h1>
+              <h3 class="ls-50">ready to start your <span class="text-primary">BREW</span> Venture?</h3>
+              <div class="btn-block">
+                <a data-scroll-to="#two" href="#" class="btn btn-md btn-default">Learn more <span class="icon icon-sm fa fa-angle-double-down"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a data-scroll-to="#two" href="#" class="scroll-btn icon icon-sm fa fa-angle-down"></a>
+      </div>
+    </section>
+
+    <!--======== Info section ========-->
+    <section id="two" class="p-80 bg-soft">
+      <div class="container">
+        <div>
+          <h2>Why should you choose <span class="text-primary"><br><span style="color:black;">Brew</span>Ventures?</span></h2>
+          <hr class="divider">
+          <p>We help you make your own custom brewery tour <br class="hide show-md-block"> complete with directions and reccomended stops along the way. </p>
+        </div>
+        <div class="row flex-center mt-40">
+          <div class="col-sm-6 col-md-3">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-1.png" alt=""></span>
+              <h4>Saves You Time</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-sm-0">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-2.png" alt=""></span>
+              <h4>Local Breweries</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-md-0">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-3.png" alt=""></span>
+              <h4>Detailed Directions</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-md-0">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-4.png" alt=""></span>
+              <h4>Share Your Trip</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Content section ==========-->
+    <section id="three" class="p-60 p-lg-80 bg-soft">
+      <div class="container">
+        <div>
+          <h2>Brew<span class="text-primary">Ventures</span></h2>
+          <hr class="divider">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="row flex-center text-md-left mt-40">
+          <div class="col-md-6 col-lg-8 flex-item-middle text-center">
+            <img src="img/index-02.png" width="678" height="409" alt="">
+          </div>
+          <div class="col-sm-8 col-md-6 col-lg-4 mt-30 mt-md-0 wow fadeInLeft">
+            <div>
+              <h5><span class="icon icon-lg text-primary text-middle fa fa-paint-brush"></span> <span class="pl-20 text-middle">Elegant design</span></h5>
+              <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="mt-30 mt-md-40">
+              <h5><span class="icon icon-lg text-primary text-middle fa fa-clock-o"></span> <span class="pl-20 text-middle">Always in time</span></h5>
+              <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="mt-30 mt-md-40">
+              <h5><span class="icon icon-lg text-primary text-middle fa fa-money"></span> <span class="pl-20 text-middle">Cost effective</span></h5>
+              <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Testimonail section ==========-->
+    <section class="p-40 bg-primary" id="four">
+      <div class="container all-light text-md-left">
+        <div class="row">
+          <div class="col-md-6 flex-item-middle wow fadeInUp">
+            <div class="text-center">
+              <img src="img/index-03.jpg" class="text-middle img-circled" width="117" height="117" alt="">
+              <div class="show-sm-inline-block text-sm-left text-middle pl-sm-60 mt-20 mt-sm-0">
+                <h4>Peter Woods</h4>
+                <h5 class="default-font">Head Visual Hero</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 flex-item-middle seporator mt-10 mt-md-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Previous Trips ==========-->
+    <section>
+      <div class=" text-md-left">
+        <div class="row flex-center">
+          <div class="col-md-6">
+            <img src="img/index-04.jpg" class="full-height-img" width="913" height="511" alt="">
+          </div>
+          <div class="col-md-6">
+            <div class="inset-1">
+              <h3>Previous Trips<br class="hide show-md-block">from our users</h3>
+              <p class="mt-20 mt-md-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <ul class="marked-list mt-20 mt-md-30">
+                <li><span>Lorem ipsum dolor sit amet</span></li>
+                <li><span>Lorem ipsum dolor sit amet</span></li>
+                <li><span>Lorem ipsum dolor sit amet</span></li>
+              </ul>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== About Section ==========-->
+    <section class="p-60 p-lg-80 bg-soft" id="five">
+      <div class="container">
+        <div>
+          <h2>our team <span class="text-primary">members</span></h2>
+          <hr class="divider">
+          <p>We work hard so you can play</p>
+        </div>
+        <center>
+        <div class="row text-md-left mt-40">
+          <div class="col-sm-6 col-md-3 hover-img">
+            <div class="show-inline-block icon-line">
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-facebook"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-twitter"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-behance"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-dribbble"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/index-05.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Tyler<br>Olli</h5>
+              <p class="big">UI / UX Designer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-sm-0 hover-img" data-wow-delay="0.1s">
+            <div class="show-inline-block icon-line">
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-facebook"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-twitter"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-behance"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-dribbble"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/index-06.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Hannah<br>King</h5>
+              <p class="big">Web Developer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-md-0 hover-img" data-wow-delay="0.2s">
+            <div class="show-inline-block icon-line">
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-facebook"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-twitter"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-behance"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-dribbble"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/index-07.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Jarrett<br>Tolman</h5>
+              <p class="big">API Specialist</p>
+            </div>
+          </div>
+              <div class="col-sm-6 col-md-3 mt-30 mt-sm-0 hover-img" data-wow-delay="0.1s">
+            <div class="show-inline-block icon-line">
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-facebook"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-twitter"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-behance"></span></a>
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-dribbble"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/index-06.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Rayal<br>Bhimavarapu</h5>
+              <p class="big">Javascript Specialist</p>
+            </div>
+          </div>
+</center>
+        </div>
+      </div>
+    </section> 
+
+    <!--========== CTA ==========-->
+    <section class="p-60 bg-primary">
+      <div class="container all-light">
+        <div class="row flex-center">
+          <div class="col-md-9 col-lg-10 flex-item-middle">
+            <h3>Enter your email to share your Brewery Itinerary</h3>
+          </div>
+          <div class="col-md-3 col-lg-2 flex-item-middle mt-20 mt-md-0">
+            <a data-scroll-to="#subscr" href="#" class="btn btn-md btn-default">Send</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Testimonials section ==========-->
+    <section id="four" class="parallax-bg p-80" data-parallax="scroll" data-speed="0.4" data-image-src="img/index-08.jpg">
+      <div class="container all-light">
+        <div>
+          <h2>What our <span class="text-primary">clients</span> say</h2>
+          <hr class="divider">
+        </div>
+        <div class="row flex-center text-md-left">
+          <div class="col-md-10">
+            <div class="slider-1">
+              <div class="row flex-center">
+                <div class="col-md-2 text-center">
+                  <img src="img/index-09.jpg" width="127" height="127" alt="">
+                  <h6 class="mt-20">Eric Shaw</h6>
+                  <p>Lead Manager</p>
+                </div>
+                <div class="col-md-7">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+              <div class="row flex-center">
+                <div class="col-md-2 text-center">
+                  <img src="img/index-10.jpg" width="127" height="127" alt="">
+                  <h6 class="mt-20">Eric Shaw</h6>
+                  <p>Lead Manager</p>
+                </div>
+                <div class="col-md-7">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+              <div class="row flex-center">
+                <div class="col-md-2 text-center">
+                  <img src="img/index-11.jpg" width="127" height="127" alt="">
+                  <h6 class="mt-20">Eric Shaw</h6>
+                  <p>Lead Manager</p>
+                </div>
+                <div class="col-md-7">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Accordion section ==========-->
+    <section class="p-60 bg-gray">
+      <div class="container">
+        <div>
+          <h2>FAQ</h2>
+          <hr class="divider">    
+          <p>Here are some of our most asked questions.</p>
+        </div>
+        <div class="row flex-center mt-40">
+          <div class="col-sm-8 col-md-5">
+            <div class="accordion">
+              <h6 class="accordion-title active">What API's do you use?<span class="arrow"></span></h6>
+              <div class="accordion-inner active">
+                <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              </div>
+
+              <h6 class="accordion-title">How accurate is the site?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              </div>
+
+              <h6 class="accordion-title">How do you reccomend breweries?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-5 mt-20 mt-md-0">
+            <div class="accordion">
+              <h6 class="accordion-title">How many breweries can I add to my trip?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              </div>
+
+              <h6 class="accordion-title active">What if my brewery isn't on the list?<span class="arrow"></span></h6>
+              <div class="accordion-inner active">
+                <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              </div>
+
+              <h6 class="accordion-title">What are your plans for the future?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Slider section ==========-->
+    <section class="p-60">
+      <div class="container">
+        <div>
+          <h2>Featured Breweries</h2>
+          <hr class="divider">
+          <p>Check out some of our favorite breweries from around the world.</p>
+        </div>
+        <div class="slider-2">
+          <div><a href="#" class="show-block"><img src="img/brand-1.png" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/brand-2.png" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/brand-3.png" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/brand-4.png" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/brand-5.png" width="150" height="40" alt=""></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== Contact section ==========-->
+    <section class="p-80 bg-gray z-index-high" id="six">
+      <div class="container ">
+        <h2>Get in touch</h2>
+        <hr class="divider">
+        <p>Send us a message! We would love to hear about your BrewVenture.</p>
+        <div class="row flex-center contact-data">
+          <div class="col-sm-4">
+            <div><span class="icon icon-md fa fa-map-marker"></span></div>
+            <h6>Location:</h6>
+            <p>Charlotte, North Carolina</p>
+          </div>
+          <div class="col-sm-4 mt-20 mt-sm-0">
+            <div><span class="icon icon-md fa fa-envelope-o"></span></div>
+            <h6>Email:</h6>
+            <p><a href="#">info@brewventures.com</a></p>
+          </div>
+        </div>
+        <form class="contact-form js-form">
+          <div class="row flex-center">
+            <div class="col-sm-8 col-md-5">
+              <div class="form-group"><input autocomplete="off" type="text" name="name" class="form-control required" placeholder="Full Name"></div>
+              <div class="form-group"><input autocomplete="off" type="email" name="email" class="form-control required" placeholder="Email address"></div>
+              <div class="form-group"><input autocomplete="off" type="text" name="phone" class="form-control required" placeholder="Phone number"></div>
+            </div>
+            <div class="col-sm-8 col-md-5 mt-30 mt-md-0">
+              <div class="form-group height100"><textarea name="message" class="form-control required" placeholder="Your message"></textarea></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-md btn-primary mt-30">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- Core Scripts -->
+<script src="js/minified.js"></script>
+
+<!-- Additional Functionality Scripts -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
