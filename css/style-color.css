@@ -1,5 +1,14 @@
 /* ======= COLOR 1 ======= */
 
+
+input, select, textarea{
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+
 #page-preloader,
 .bg-primary,
 .btn-default:hover,
