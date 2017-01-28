@@ -6303,6 +6303,10 @@ html .scroll-btn:after {
   left: -40px;
 }
 
+body {
+    overflow-x:hidden;
+}
+
 /*
 * Media
 // ====================*/
