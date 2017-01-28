@@ -17,6 +17,8 @@
   4. BrewVenture API 
   5. Timed brewery visits
   6. Location based info while on trip
+  7. Untappd API
+  8. Optimize database => brewery info (dynamically generate with api)
 
 ## Tasks:
   1. Finalize features
