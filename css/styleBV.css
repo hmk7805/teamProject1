@@ -3,11 +3,11 @@ body {
 }
 
 /*brewery sidebar styling*/
-#brewerySidebar {
+#brewSidebar {
 	position: relative;
-	background-color: white;
+	background-color: #fbb03b;
 	overflow: auto;
-	height: 300px;
+	height: 400px;
 	width: 35%;
 	border-color: black;
 	border: 20px;
@@ -15,23 +15,43 @@ body {
 }
 .brewDiv{
 	padding-top:20px;
+
 }
 .faviconHop{
-	width:20px; height:25px
+/*small hop in brewerySidebar beside brewName*/
 }
 .brewName{
 	display:inline;
 }
+.brewBtn { 
+	text-align: center;
+	background-color: #FFFFFF;
+	border-radius: 5%;
+	width:100%;
+	margin-bottom: 0px;
+}
 .brewExpand {
-/*	display: none; 
-*/	width: 100%;
+	width: 100%;
+	margin:1px;
 }
 .brewLogo {
+	padding:10px;
 	width:225px;
 	height:225px;
 }
-.brewInfo {
-
+.brewInfoDiv {
+	margin:1px;
 }
+
+
 /*brewery sidebar styling end*/
 
+/*Accordian*/
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+/*accordian end*/

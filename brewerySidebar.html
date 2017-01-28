@@ -3,24 +3,47 @@
 <head>
     <!-- Site Title -->
     <title>BrewVentures</title>
-
     <meta charset="utf-8"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
-    <!-- Stylesheet -->
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-color.css">
     <link rel="stylesheet" href="css/styleBV.css">  
 
     <!-- jQuery -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    
+    <!-- Moment.js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js'></script>
+
+    <!-- Firebase -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="js/hk.js"></script>
   
 </head>
 <body>
-<!-- Side Bar mock up with classes and IDs there is css (styleBV.css) and js (line 34) that are necessary for this.-->
-<!-- <img src='img/hop.png' class ='faviconHop' -->
-<div id='brewerySidebar'>
-    <button class="accordion">
-        <img src='img/hop.png' alt='hop' class='faviconHop'>
+
+
+<!-- Accordian Side Bar mock up with classes and IDs there is css (styleBV.css) and js (line 34) that are necessary for this -->
+<div id='brewSidebar'>
+    <button class='accordion brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h4 class='brewName'>Brewery Name</h4>
+    </button>
+    <div class='panel brewInfoDiv'>
+        <img src='' alt = 'breweryDB IconLarge' class = 'brewLogo'>
+        <p class='brewInfo'>Address</p>
+        <p class='brewInfo'>Hours 00AM-00PM</p>
+        <a href='websiteURL'><p class = 'brewInfo'>Website Url</p></a>
+    </div>
+    <button class='accordion brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
         <h4 class='brewName'>Brewery Name</h4>
     </button>
     <div class='panel'>
