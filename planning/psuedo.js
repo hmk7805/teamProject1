@@ -1,4 +1,17 @@
 //capture user inputs
+	// event listener on location search
+	// then populate brewery sidebar
+		// event listener on Add To Trip button - needs lat, long (.addBtn)
+	
+	// event listener on Create Trip button
+		// Google API call to optimize waypoints
+		// Firebase to add (trip name, trip date, brewery name with lat/long - in object)
+		// generate trip.html
+
+
+// eventually... on page load, get previous trips from Firebase
+
+
 //ajax to brew API
 //	info we need to call
 	//address
