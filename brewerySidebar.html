@@ -38,13 +38,34 @@
         <img src='img/hop2.png' alt='hop' class='faviconHop'>
         <h4 class='brewName'>Brewery Name</h4>
         <img src='img/plus-img.png' alt='Add a Brewery' class='addBtn'>
-
     </button>
     <div class='panel'>
         <img src='' alt = 'breweryDB IconLarge' class = 'brewLogo'>
         <p class='brewInfo'>Address</p>
         <p class='brewInfo'>Hours 00AM-00PM</p>
         <a href='websiteURL'><p class = 'brewInfo'>Website Url</p></a>
+    </div>
+</div>
+<div id='tourSidebar'>
+    <button class='accordion tourBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h4 class='tourName'>Tour Name</h4>
+    </button>
+    <div class='panel tourInfoDiv'>
+        <p class='tourInfo'>Tour Name</p>
+        <p class='tourInfo'>Tour City</p>
+        <a href='websiteURL'><p class = 'tourInfo'>URL to Share</p></a>
+        <!-- accordian for breweries on the individual saved tours -->
+        <button class='accordion brewBtn'>
+            <img src='img/hop2.png' alt='hop' class='faviconHop'>
+            <h4 class='brewName'>Brewery Name</h4>
+        </button>
+        <div class='panel'>
+            <img src='' alt = 'breweryDB IconLarge' class = 'brewLogo'>
+            <p class='brewInfo'>Address</p>
+            <p class='brewInfo'>Hours 00AM-00PM</p>
+            <a href='websiteURL'><p class = 'brewInfo'>Website Url</p></a>
+        </div>
     </div>
 </div>   
 
@@ -64,6 +85,8 @@ for (i = 0; i < acc.length; i++) {
   }
 } 
 //accordian end
+//tourSide bar
+    //on click of tourBtn we need to have the map view for that tour show in the left panel.
 </script>
 
 <!-- Core Scripts -->
