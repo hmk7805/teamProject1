@@ -104,7 +104,7 @@ var breweryAPI = {
                 // append address to div
                 $(address).appendTo(panelDiv);
                 // p - brewHours
-                var hours = $("<p>", {
+                var brewHours = $("<p>", {
                     class: "brewHours",
                     text: e["hoursOfOperation"]
                 });
