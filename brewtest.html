@@ -16,38 +16,8 @@
         <script src="js/breweryDB.js"></script>
         
         <script>
-            // breweryAPI.setURL(name = "raleigh");
-            // breweryAPI.makeCall();
-            // new button - accordionBtn brewBtn
-                var accordianBtn = $("<button>", {
-                    class: "accordionBtn brewBtn"
-                });
-                // faviconHop image - faviconHop
-                var hopImg = $("<img>", {
-                    class: "faviconHop",
-                    src: "img/hop2.png"
-                });
-                // append image to accordianBtn
-                $(hopImg).appendTo(accordianBtn);
-                // h4 - brewName
-                var breweryName = $("<h4>", {
-                    class: "brewName",
-                    text: "Name"
-                });
-                // append name to accordianBtn
-                $(breweryName).appendTo(accordianBtn);
-                // add image - addBtn (data-lat, data-long, data-name)
-                var addBtnImage = $("<img>", {
-                    class: "addBtn",
-                    src: "img/plus-img.png",
-                    "data-lat": 123,
-                    "data-long": 456,
-                    "data-name": "Name"
-                });
-                // append image to accordianBtn
-                $(addBtnImage).appendTo(accordianBtn);
-                // append button to brewSidebar
-                $("#brewSidebar").append(accordianBtn);
+            breweryAPI.setURL(name = "raleigh");
+            breweryAPI.makeCall();
         </script>
 
         <!--<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
