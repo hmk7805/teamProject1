@@ -18,24 +18,26 @@
         
         <script>
             breweryAPI.setURL(name = "raleigh");
-            breweryAPI.makeCall();
+            breweryAPI.makeCall(accordion);
         </script>
 
         <script>
         // accordian
-        var acc = document.getElementsByClassName("accordionBtn");
-        var i;
-        for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight){
-            panel.style.maxHeight = null;
-            } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+        function accordion() {
+            var acc = document.getElementsByClassName("accordionBtn");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                    } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                }
             } 
         }
-        } 
         //accordian end
         </script>
 

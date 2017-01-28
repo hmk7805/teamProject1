@@ -27,7 +27,7 @@ var breweryAPI = {
         breweryAPI.queryURL = "";
     },
     // make ajax call to api service
-    makeCall: function makeCall() {
+    makeCall: function makeCall(callback) {
         // make ajax call
         $.ajax({
             url: breweryAPI.queryURL,
@@ -121,6 +121,7 @@ var breweryAPI = {
                 // append to brewSidebar
                 $("#brewSidebar").append(panelDiv);
             });
+            callback();
         // if there is an error
         }).fail(function(err) {
             throw err;
