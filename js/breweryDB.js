@@ -36,6 +36,8 @@ var breweryAPI = {
         }).done(function(result){
             // iterate results
             result.data.forEach(function(e) {
+
+                console.log(e);
                 
                 // data points to use
                 // e["brewery"]["name"]
