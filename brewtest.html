@@ -2,9 +2,12 @@
 <html lang="en-us">
     <head>
         <title>BreweryDB API Test</title>
+        <link rel="stylesheet" href="css/styleBV.css"> 
     </head>
 
     <body>
+
+        <div id="brewSidebar"></div>
 
         <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -12,11 +15,33 @@
             crossorigin="anonymous"></script>
 
         <script src="js/breweryDB.js"></script>
+
+        <script>
+        // accordian
+        function accordion() {
+            var acc = document.getElementsByClassName("accordionBtn");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                    } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                }
+            } 
+        }
+        //accordian end
+        </script>
         
         <script>
             breweryAPI.setURL(name = "raleigh");
-            breweryAPI.makeCall();
+            breweryAPI.makeCall(accordion);
         </script>
+
+        
 
         <!--<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
         <script>
