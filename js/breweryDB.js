@@ -3,7 +3,7 @@
 
 var breweryAPI = {
     // *** api variables ***
-    url: "https://secret-spire-74760.herokuapp.com/breweryDbService.php",
+    url: "https://secret-spire-74760.herokuapp.com/php/breweryDbService.php",
     queryURL: "",
     name: "charlotte",
     type: "micro,brewpub",
