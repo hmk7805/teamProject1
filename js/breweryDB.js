@@ -85,13 +85,16 @@ var breweryAPI = {
                     class: "panel brewInfoDiv"
                 });
                 // brewery image - brewLogo
-                if(e["brewery"]["images"]["squareMedium"]) {
+                try {
                     var brewImg = $("<img>", {
                         class: "brewLogo",
                         src: e["brewery"]["images"]["squareMedium"]
                     });
                     // append image to div
                     $(brewImg).appendTo(panelDiv);
+                }
+                catch (e) {
+                    console.log("image does not exist");
                 }
                 // p - brewAddress
                 var address = $("<p>", {
