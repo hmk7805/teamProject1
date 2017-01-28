@@ -85,12 +85,14 @@ var breweryAPI = {
                     class: "panel brewInfoDiv"
                 });
                 // brewery image - brewLogo
-                var brewImg = $("<img>", {
-                    class: "brewLogo",
-                    src: e["brewery"]["images"]["squareMedium"]
-                });
-                // append image to div
-                $(brewImg).appendTo(panelDiv);
+                if(e["brewery"]["images"]["squareMedium"]) {
+                    var brewImg = $("<img>", {
+                        class: "brewLogo",
+                        src: e["brewery"]["images"]["squareMedium"]
+                    });
+                    // append image to div
+                    $(brewImg).appendTo(panelDiv);
+                }
                 // p - brewAddress
                 var address = $("<p>", {
                     class: "brewAddress",
