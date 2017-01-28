@@ -3,7 +3,7 @@
 
 var breweryAPI = {
     // *** api variables ***
-    url: "https://infinite-shore-11678.herokuapp.com/breweryDbService.php",
+    url: "https://secret-spire-74760.herokuapp.com/breweryDbService.php",
     queryURL: "",
     name: "charlotte",
     type: "micro,brewpub",
@@ -41,6 +41,7 @@ var breweryAPI = {
                 // e["brewery"]["name"]
                 // e["brewery"]["description"]
                 // e["brewery"]["website"]
+                // e["brewery"]["images"]["squareMedium"]
                 // e["latitude"]
                 // e["longitude"]
                 // e["phone"]
