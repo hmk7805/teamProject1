@@ -23,6 +23,9 @@ $("#locationsubmit").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
 
+    // clear the breweryList
+    breweryList = [];
+
     // get the location from user
     var loc = $("#locationform").val().trim();
     // and draw a google map of the given location
