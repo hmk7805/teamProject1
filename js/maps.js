@@ -21,7 +21,7 @@ function getLocFromGeocode(results, status) {
         city = latLng;
         // create default map options
         var mapOptions = {
-            zoom: 7,
+            zoom: 10,
             center: city
         };
         // cosntruct g map      
@@ -47,7 +47,7 @@ function placeMarker(map, location, name) {
     // create a marker object using location, name
     var marker = new google.maps.Marker({
         position: location,
-        icon: "../img/hop2.png",
+        icon: "./../teamProject1/img/hop2.png",
         map: map
     });
     // create a infowindow for tooltip
@@ -65,9 +65,7 @@ function placeMarker(map, location, name) {
 
 // function to draw the route on the map on create trip using the brewery list
 function calcRoute(breweryList) {
-    directionsDisplay = new google.maps.DirectionsRenderer();
-    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    directionsDisplay.setMap(map);
+
     //get 1st brewery as start location
     var start = breweryList[0].loc;
     //get last brewery as end location
@@ -83,6 +81,7 @@ function calcRoute(breweryList) {
         origin: start,
         destination: end,
         waypoints: wayPoints,
+        optimizeWaypoints: true,
         travelMode: google.maps.TravelMode.DRIVING
     };
 
