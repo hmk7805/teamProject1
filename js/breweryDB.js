@@ -26,6 +26,91 @@ var breweryAPI = {
     resetURL: function resetURL() {
         breweryAPI.queryURL = "";
     },
+    // make button and add to sidebar
+    makeAccordionBtn: function makeAccordionBtn(e) {
+        // create variables for info items
+        var name = e["brewery"]["name"];
+        var lat = e["latitude"];
+        var long = e["longitude"];
+        // new button - accordionBtn brewBtn
+        var accordianBtn = $("<button>", {
+            class: "accordionBtn brewBtn"
+        });
+        // faviconHop image - faviconHop
+        var hopImg = $("<img>", {
+            class: "faviconHop",
+            src: "../img/hop2.png"
+        });
+        // append image to accordianBtn
+        $(hopImg).appendTo(accordianBtn);
+        // h4 - brewName
+        var breweryName = $("<h4>", {
+            class: "brewName",
+            text: name
+        });
+        // append name to accordianBtn
+        $(breweryName).appendTo(accordianBtn);
+        // add image - addBtn (data-lat, data-long, data-name)
+        var addBtnImage = $("<img>", {
+            class: "addBtn",
+            src: "../img/plus-img.png",
+            "data-lat": lat,
+            "data-long": long,
+            "data-name": name
+        });
+        // append image to accordianBtn
+        $(addBtnImage).appendTo(accordianBtn);
+        // append button to brewSidebar
+        $("#brewSidebar").append(accordianBtn);
+    },
+    // create div, add info, append to sidebar
+    makeInfoDiv: function makeInfoDiv(e) {
+        // create variables for brewery info items
+        var image = e["brewery"]["images"]["squareMedium"];
+        var address = e["streetAddress"];
+        var hours = e["hoursOfOperation"];
+        var website = e["brewery"]["website"];
+        // new div - panel brewInfoDiv
+        var panelDiv = $("<div>", {
+            class: "panel brewInfoDiv"
+        });
+        // brewery image - brewLogo
+        try {
+            var brewImg = $("<img>", {
+                class: "brewLogo",
+                src: image
+            });
+            // append image to div
+            $(brewImg).appendTo(panelDiv);
+        }
+        catch (e) {
+            console.log("image does not exist");
+        }
+        // p - brewAddress
+        var address = $("<p>", {
+            class: "brewAddress",
+            text: address
+        });
+        // append address to div
+        $(address).appendTo(panelDiv);
+        // p - brewHours
+        var brewHours = $("<p>", {
+            class: "brewHours",
+            text: hours
+        });
+        // append hours to div
+        $(brewHours).appendTo(panelDiv);
+        // a - brewUrl
+        var brewUrl = $("<a>", {
+            class: "brewUrl",
+            href: website,
+            text: website
+        });
+        // append url to div
+        $(brewUrl).appendTo(panelDiv);
+        // append to brewSidebar
+        $("#brewSidebar").append(panelDiv);
+    },
     // make ajax call to api service
     makeCall: function makeCall(callback) {
         // make ajax call
@@ -36,92 +121,9 @@ var breweryAPI = {
         }).done(function(result){
             // iterate results
             result.data.forEach(function(e) {
-
-                console.log(e);
-                
-                // data points to use
-                // e["brewery"]["name"]
-                // e["brewery"]["description"]
-                // e["brewery"]["website"]
-                // e["brewery"]["images"]["squareMedium"]
-                // e["latitude"]
-                // e["longitude"]
-                // e["phone"]
-                // e["streetAddress"]
-                // e["locationTypeDisplay"]
-                // e["hoursOfOperation"]
-
-                // new button - accordionBtn brewBtn
-                var accordianBtn = $("<button>", {
-                    class: "accordionBtn brewBtn"
-                });
-                // faviconHop image - faviconHop
-                var hopImg = $("<img>", {
-                    class: "faviconHop",
-                    src: "../img/hop2.png"
-                });
-                // append image to accordianBtn
-                $(hopImg).appendTo(accordianBtn);
-                // h4 - brewName
-                var breweryName = $("<h4>", {
-                    class: "brewName",
-                    text: e["brewery"]["name"]
-                });
-                // append name to accordianBtn
-                $(breweryName).appendTo(accordianBtn);
-                // add image - addBtn (data-lat, data-long, data-name)
-                var addBtnImage = $("<img>", {
-                    class: "addBtn",
-                    src: "../img/plus-img.png",
-                    "data-lat": e["latitude"],
-                    "data-long": e["longitude"],
-                    "data-name": e["brewery"]["name"]
-                });
-                // append image to accordianBtn
-                $(addBtnImage).appendTo(accordianBtn);
-                // append button to brewSidebar
-                $("#brewSidebar").append(accordianBtn);
-
-                // new div - panel brewInfoDiv
-                var panelDiv = $("<div>", {
-                    class: "panel brewInfoDiv"
-                });
-                // brewery image - brewLogo
-                try {
-                    var brewImg = $("<img>", {
-                        class: "brewLogo",
-                        src: e["brewery"]["images"]["squareMedium"]
-                    });
-                    // append image to div
-                    $(brewImg).appendTo(panelDiv);
-                }
-                catch (e) {
-                    console.log("image does not exist");
-                }
-                // p - brewAddress
-                var address = $("<p>", {
-                    class: "brewAddress",
-                    text: e["streetAddress"]
-                });
-                // append address to div
-                $(address).appendTo(panelDiv);
-                // p - brewHours
-                var brewHours = $("<p>", {
-                    class: "brewHours",
-                    text: e["hoursOfOperation"]
-                });
-                // append hours to div
-                $(brewHours).appendTo(panelDiv);
-                // a - brewUrl
-                var brewUrl = $("<a>", {
-                    class: "brewUrl",
-                    href: e["brewery"]["website"],
-                    text: e["brewery"]["website"]
-                });
-                // append url to div
-                $(brewUrl).appendTo(panelDiv);
-                // append to brewSidebar
-                $("#brewSidebar").append(panelDiv);
+                // call functions to build sidebar
+                breweryAPI.makeAccordionBtn(e);
+                breweryAPI.makeInfoDiv(e);
             });
             callback();
         // if there is an error
