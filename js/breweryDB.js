@@ -65,6 +65,8 @@ var breweryAPI = {
     },
     // create div, add info, append to sidebar
     makeInfoDiv: function makeInfoDiv(e) {
+        console.log(e["brewery"]["description"]);
+        // e["locationTypeDisplay"]
         // create variables for brewery info items
         var image = e["brewery"]["images"]["squareMedium"];
         var address = e["streetAddress"];
@@ -131,4 +133,4 @@ var breweryAPI = {
             throw err;
         });
     }
-}
+};
