@@ -35,7 +35,11 @@ var breweryAPI = {
         var id = e["id"];
         // new button - accordionBtn brewBtn
         var accordianBtn = $("<button>", {
-            class: "accordionBtn brewBtn"
+            class: "accordionBtn brewBtn",
+            "data-lat": lat,
+            "data-long": long,
+            "data-name": name,
+            "data-id": id
         });
         // faviconHop image - faviconHop
         var hopImg = $("<img>", {
@@ -54,11 +58,7 @@ var breweryAPI = {
         // add image - addBtn (data-lat, data-long, data-name)
         var addBtnImage = $("<img>", {
             class: "addBtn",
-            src: "../img/plus-img.png",
-            "data-lat": lat,
-            "data-long": long,
-            "data-name": name,
-            "data-id": id
+            src: "../img/plus-img.png"
         });
         // append image to accordianBtn
         $(addBtnImage).appendTo(accordianBtn);
