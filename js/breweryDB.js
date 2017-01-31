@@ -32,13 +32,14 @@ var breweryAPI = {
         var name = e["brewery"]["name"];
         var lat = e["latitude"];
         var long = e["longitude"];
+        var id = e["id"];
         // new button - accordionBtn brewBtn
         var accordianBtn = $("<button>", {
-            class: "accordionBtn brewBtn"
+            class: "accordionBtn"
         });
         // faviconHop image - faviconHop
         var hopImg = $("<img>", {
-            class: "faviconHop",
+            class: "faviconHop brewBtn",
             src: "../img/hop2.png"
         });
         // append image to accordianBtn
@@ -56,7 +57,8 @@ var breweryAPI = {
             src: "../img/plus-img.png",
             "data-lat": lat,
             "data-long": long,
-            "data-name": name
+            "data-name": name,
+            "data-id": id
         });
         // append image to accordianBtn
         $(addBtnImage).appendTo(accordianBtn);
@@ -121,6 +123,8 @@ var breweryAPI = {
             method: "GET",
         // when complete
         }).done(function(result){
+            // empty sidebar
+            $("#brewSidebar").empty();
             // iterate results
             result.data.forEach(function(e) {
                 // if location is not closed permanently
