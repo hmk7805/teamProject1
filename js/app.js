@@ -38,7 +38,7 @@ $("#locationsubmit").on("click", function(event) {
 
 
 // 2. Button for adding breweries
-$(".add-btn").on("click", function(event) {
+$(".addBtn").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
 
