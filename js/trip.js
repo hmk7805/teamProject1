@@ -17,4 +17,4 @@ var trip = {
         // ajax call to breweryDB to get description, website, hours, address, etc.
         // makeSingleCall(brewery);
         // populate html template
-}
+};
