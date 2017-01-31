@@ -453,13 +453,25 @@
     <!-- Additional Functionality Scripts -->
     <script src="js/main.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
     <script>
+        // initialize firebase
+        var config = {
+            apiKey: "AIzaSyAqJwLe-xGxjo5IpHLcl28UNz7_5W7uEig",
+            authDomain: "brewventures-bd06d.firebaseapp.com",
+            databaseURL: "https://brewventures-bd06d.firebaseio.com",
+            storageBucket: "brewventures-bd06d.appspot.com",
+            messagingSenderId: "772130205350"
+        };
+
+        firebase.initializeApp(config);
     </script>
 
-    <script src="js/breweryDB.js"></script>
-    <script src="js/firebase.js"></script>
+    <!--<script src="js/authcontrol.js"></script>-->
+    <script src="js/brewerydb.js"></script>
     <script src="js/maps.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/firebasecontrol.js"></script>
 
 </body>
 
