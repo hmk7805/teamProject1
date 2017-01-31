@@ -35,11 +35,11 @@ var breweryAPI = {
         var id = e["id"];
         // new button - accordionBtn brewBtn
         var accordianBtn = $("<button>", {
-            class: "accordionBtn"
+            class: "accordionBtn brewBtn"
         });
         // faviconHop image - faviconHop
         var hopImg = $("<img>", {
-            class: "faviconHop brewBtn",
+            class: "faviconHop",
             src: "../img/hop2.png"
         });
         // append image to accordianBtn
