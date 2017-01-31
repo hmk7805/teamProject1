@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (function() {
 
     "use strict";
@@ -173,6 +174,203 @@
             });
         }
     });
+=======
+(function(){
+
+  "use strict";
+
+  // Variables
+  // =========================================================================================
+  var $html = $('html'),
+      $document = $(document),
+      $window = $(window),
+      i = 0;
+
+
+  // Scripts initialize
+  // ===================
+
+  //document.write('<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAYjhWq7DvCwCiRKotPu9_IXQxupSQbhuo" type="text/javascript"></script>');
+
+  $window.on('load', function () {
+
+    // =================================================================================
+    // Preloader
+    // =================================================================================
+    var $preloader = $('#page-preloader');
+    $preloader.delay(100).fadeOut('slow');
+
+    // =================================================================================
+    // WOW
+    // =================================================================================
+    if ($html.hasClass('desktop')) { new WOW().init(); }
+
+    // =================================================================================
+    // Google Map
+    // =================================================================================
+    var map = $(".map");
+    if(map.length){
+      var mapWrapper = $('#google-map'),
+          latlng = new google.maps.LatLng(mapWrapper.data("x-coord"), mapWrapper.data("y-coord")),
+          styles = [
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#e9e9e9" },
+              { "lightness": 17 }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#f5f5f5" },
+              { "lightness": 20 }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+              { "color": "#ffffff" },
+              { "lightness": 17 }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              { "color": "#ffffff" },
+              { "lightness": 29 },
+              { "weight": 0.2 }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#ffffff" },
+              { "lightness": 18 }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#ffffff" },
+              { "lightness": 16 }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#f5f5f5" },
+              { "lightness": 21 }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#dedede" },
+              { "lightness": 21 }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              { "visibility": "on" },
+              { "color": "#ffffff" },
+              { "lightness": 16 }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              { "saturation": 36 },
+              { "color": "#333333" },
+              { "lightness": 40 }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              { "visibility": "off" }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [
+              { "color": "#f2f2f2" },
+              { "lightness": 19 }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [
+              { "color": "#fefefe" },
+              { "lightness": 20 }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              { "color": "#fefefe" },
+              { "lightness": 17 },
+              { "weight": 1.2 }
+            ]
+          }
+        ],
+          myOptions = {
+            scrollwheel: false,
+            zoom: 10,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: false,
+            styles: styles
+          },
+          map = new google.maps.Map(mapWrapper[0], myOptions),
+          marker = new google.maps.Marker({
+            position: {lat: mapWrapper.data("x-coord"), lng: mapWrapper.data("y-coord")},
+            draggable: false,
+            animation: false,
+            map: map,
+            icon: 'img/marker.png'
+          }),
+          infowindow = new google.maps.InfoWindow({
+            content: mapWrapper.data("text")
+          });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+  });
+
+
+  $document.ready(function () {
+
+    // =================================================================================
+    // Contact Form
+    // =================================================================================
+    var contactForm = $(".contact-form");
+    if(contactForm.length){
+      var contactResault = $("body").append("<span class='form-resault'></span>").find(".form-resault");
+      contactForm.each(function(){
+        var this_form = $(this);
+        var contactFormInput = this_form.find(".form-control.required");
+
+        contactFormInput.on("blur", function(){
+          if(!$.trim($(this).val())){
+            $(this).parent().addClass("input-error");
+          }
+        });
+>>>>>>> a7fc706a0790f06919ba08cfe1c1fea68270b66d
 
 
     $document.ready(function() {
