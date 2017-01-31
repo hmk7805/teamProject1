@@ -70,4 +70,4 @@ $(".previousTrip").on("click", function() {
 });
 
 // fb.addTrip returns key
-$('document').ready(fb.getPreviousTrip(fb.addTrip("test trip 23")));
+//$('document').ready(fb.getPreviousTrip(fb.addTrip("test trip 23")));
