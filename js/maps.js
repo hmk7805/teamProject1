@@ -29,7 +29,7 @@ function getLocFromGeocode(results, status) {
         // draw map.
         directionsDisplay.setMap(map);
     } else {
-        alert("Could not find this location " + status);
+        console.log("Could not find this location " + status);
     }
 };
 
@@ -96,7 +96,7 @@ function calcRoute(breweryList) {
                 directionsDisplay.setDirections(response);
                 directionsDisplay.setMap(map);
             } else {
-                alert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
+                alconsole.logert("Directions Request from " + start.toUrlValue(6) + " to " + end.toUrlValue(6) + " failed: " + status);
             }
         });
     }
