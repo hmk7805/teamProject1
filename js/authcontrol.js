@@ -1,8 +1,6 @@
 // Team Project 1 - BrewVentures
 // Jarrett Tolman - authcontrol.js
 
-var uid;
-
 // anonymous authentication
 firebase.auth().signInAnonymously().catch(function(error) {
   // Handle Errors here.
@@ -17,11 +15,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     var isAnonymous = user.isAnonymous;
-    uid = user.uid;
+    var uid = user.uid;
     console.log(uid);
     // call control function to load previous trips and set listener on search button
     // add test trip after auth
-    addTrip("test trip 10");
+    //addTrip("test trip 10");
   } else {
     // User is signed out.
     // ...

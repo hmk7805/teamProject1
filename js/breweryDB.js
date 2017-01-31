@@ -65,7 +65,7 @@ var breweryAPI = {
     },
     // create div, add info, append to sidebar
     makeInfoDiv: function makeInfoDiv(e) {
-        console.log(e["brewery"]["description"]);
+        console.log(e["isClosed"], e["brewery"]["description"]);
         // e["locationTypeDisplay"]
         // create variables for brewery info items
         var image = e["brewery"]["images"]["squareMedium"];
@@ -123,11 +123,32 @@ var breweryAPI = {
         }).done(function(result){
             // iterate results
             result.data.forEach(function(e) {
-                // call functions to build sidebar
-                breweryAPI.makeAccordionBtn(e);
-                breweryAPI.makeInfoDiv(e);
+                // if location is not closed permanently
+                if(!e["isClosed"] === "Y") {
+                    // call functions to build sidebar
+                    breweryAPI.makeAccordionBtn(e);
+                    breweryAPI.makeInfoDiv(e);
+                }
             });
             callback();
+        // if there is an error
+        }).fail(function(err) {
+            throw err;
+        });
+    },
+    // make ajax call to api service for info on single location id
+    makeSingleCall: function makeSingleCall(brewery) {
+        // create queryURL
+        breweryAPI.queryURL = breweryAPI.url + "/location/" + brewery.id;
+        // make ajax call
+        $.ajax({
+            url: breweryAPI.queryURL,
+            method: "GET",
+        // when complete
+        }).done(function(result){
+            // update brewery with results
+            console.log(result);
+            // brewery.description = result.description;
         // if there is an error
         }).fail(function(err) {
             throw err;
