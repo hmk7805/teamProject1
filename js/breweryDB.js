@@ -124,7 +124,7 @@ var breweryAPI = {
         // when complete
         }).done(function(result){
             // empty sidebar
-            $("#brewSidebar").empty();
+            //$("#brewSidebar").empty();
             // iterate results
             result.data.forEach(function(e) {
                 // if location is not closed permanently
