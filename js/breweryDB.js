@@ -70,7 +70,6 @@ var breweryAPI = {
         console.log(e["isClosed"], e["brewery"]["description"]);
         // e["locationTypeDisplay"]
         // create variables for brewery info items
-        var image = e["brewery"]["images"]["squareMedium"];
         var address = e["streetAddress"];
         var hours = e["hoursOfOperation"];
         var website = e["brewery"]["website"];
@@ -80,6 +79,7 @@ var breweryAPI = {
         });
         // brewery image - brewLogo
         try {
+            var image = e["brewery"]["images"]["squareMedium"];
             var brewImg = $("<img>", {
                 class: "brewLogo",
                 src: image
@@ -124,7 +124,7 @@ var breweryAPI = {
         // when complete
         }).done(function(result){
             // empty sidebar
-            //$("#brewSidebar").empty();
+            $("#brewSidebar").empty();
             // iterate results
             result.data.forEach(function(e) {
                 // if location is not closed permanently
