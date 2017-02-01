@@ -37,7 +37,7 @@ var fb = {
                 // append name to accordianBtn
                 $(breweryName).appendTo(accordianBtn);
                 // append button to brewSidebar
-              //  $("#brewSidebar").append(accordianBtn);
+                $("#previousTrips").append(accordianBtn);
 
                 // new div - panel tourInfoDiv
                 var panelDiv = $("<div>", {
@@ -53,7 +53,7 @@ var fb = {
                             // breweryAPI.makeSingleCall(brewery);
                             // li i.name - linked to website
                 // append div to brewSidebar
-              //  $("#brewSidebar").append(accordianBtn);
+              //  $("#previousTrips").append(accordianBtn);
             }
         });
     },
