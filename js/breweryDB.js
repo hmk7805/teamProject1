@@ -155,6 +155,7 @@ var breweryAPI = {
         }).done(function(result){
             // empty sidebar
             $("#brewSidebar").empty();
+            console.log(result.data);
             // iterate results
             result.data.forEach(function(e) {
                 try {
