@@ -25,6 +25,7 @@ var breweryAPI = {
         var numReg = new RegExp('^[0-9]+$');
         var alpReg = new RegExp('^[a-zA-z]+$');
         // try test for zip then city, if fail, log error
+        console.log('name ' + name);
         try {
             if(numReg.test(name)) {
                 breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
