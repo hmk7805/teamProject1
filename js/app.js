@@ -40,7 +40,7 @@ $("#locationsubmit").on("click", function(event) {
     var loc = $("#locationform").val().trim();
     $("#locationform").val("");
     // create regular expression objects for testing search input
-    var alpNum = new RegExp(/^[a-z0-9]+$/i);
+    var alpNum = new RegExp(/^[a-z0-9 ]+$/i);
     if(alpNum.test(loc)) {
         // and draw a google map of the given location
         placeEmptyMap(loc);
