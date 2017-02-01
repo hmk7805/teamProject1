@@ -25,6 +25,26 @@ function accordion() {
 };
 //accordian end
 
+// handler for new location entered by user
+$("#locationsubmit").on("click", function(event) {
+    // prevent event bubbling
+    event.preventDefault();
+
+    // clear the breweryList
+    breweryList = [];
+
+    // get the location from user
+    var loc = $("#locationform").val().trim();
+    // and draw a google map of the given location
+    placeEmptyMap(loc);
+
+    // get breweries
+    breweryAPI.setURL(name = loc);
+    breweryAPI.makeCall(accordion);
+
+    accordion();
+});
+
 // add brewery icon to map.
 function addBrewery(name, lat, lng) {
     // Grabs input
@@ -47,28 +67,7 @@ function addBrewery(name, lat, lng) {
 };
 
 
-// add brewery icon to map.
-function addBrewery(name, lat, lng) {
-    // Grabs user input
-    var bName = name;
-    var lat = lat;
-    var lng = lng;
-    var loc = new google.maps.LatLng(lat, lng);
-
-    // Creates local "temporary" object for holding brewery data
-    var newBrewery = {
-        name: bName,
-        loc: loc
-    };
-
-    // add to brewery array
-    breweryList.push(newBrewery);
-
-    // place a marker on the map 
-    placeMarker(map, loc, bName);
-};
-
-
+//handler for create button to draw the route and create a trip.
 $("#createBtn").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
