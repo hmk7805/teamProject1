@@ -10,13 +10,6 @@ var breweryAPI = {
     order: "postalCode",
     endpoint: "locations",
     // *** api functions ***
-    // set parameters, with default options
-    // setURLLocation
-    // setURLLocality
-    // setURLPostalCode
-
-    //locality, postalCode, inPlanning, isClosed, locationType, status, order
-
     setURL: function setURL(name = breweryAPI.name,
                             type = breweryAPI.type,
                             order = breweryAPI.order,
