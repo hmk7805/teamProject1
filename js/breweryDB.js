@@ -32,6 +32,7 @@ var breweryAPI = {
         var name = e["brewery"]["name"];
         var lat = e["latitude"];
         var long = e["longitude"];
+        console.log(name, lat, long);
         var id = e["id"];
         // new button - accordionBtn brewBtn
         var accordianBtn = $("<button>", {
