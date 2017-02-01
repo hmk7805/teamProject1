@@ -167,10 +167,7 @@ var breweryAPI = {
                 }
                 catch (e) {
                     console.log(e);
-                    var noResults = $("<p>", {
-                        text: "no results found"
-                    });
-                    $(noResults).appendTo("#brewSidebar");
+                    $("#brewSidebar").text("no results found");
                 }
             });
             callback();

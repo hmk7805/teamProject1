@@ -53,7 +53,7 @@ $("#locationsubmit").on("click", function(event) {
         // invalid search
         $("#brewSidebar").text("invalid search, please try again");
     }
-    $("#locationsubmit").text("");
+    $("#locationform").text("");
 });
 
 
