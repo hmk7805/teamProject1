@@ -43,6 +43,8 @@ var breweryAPI = {
                     'endpoint': endpoint,
                     'isClosed': 'N'
                 });
+            } else {
+                breweryAPI.queryURL = "";
             }
         }
         catch (e) {
