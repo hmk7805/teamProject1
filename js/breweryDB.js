@@ -162,7 +162,7 @@ var breweryAPI = {
                     try {
                         // if location is not closed permanently
                         console.log(e["isClosed"], e["streetAddress"].length);
-                        if(e["isClosed"] === "N") {
+                        if(e["isClosed"] === "N" && e["streetAddress"].length > 0) {
                             // call functions to build sidebar
                             breweryAPI.makeAccordionBtn(e);
                             breweryAPI.makeInfoDiv(e);
