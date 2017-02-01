@@ -48,20 +48,20 @@ var breweryAPI = {
         });
         // append image to accordianBtn
         $(hopImg).appendTo(accordianBtn);
-        // h4 - brewName
-        var breweryName = $("<h4>", {
+        // h6 - brewName
+        var breweryName = $("<h6>", {
             class: "brewName",
             text: name
         });
         // append name to accordianBtn
         $(breweryName).appendTo(accordianBtn);
-        // add image - addBtn (data-lat, data-long, data-name)
-        var addBtnImage = $("<img>", {
-            class: "addBtn",
-            src: "../img/plus-img.png"
-        });
-        // append image to accordianBtn
-        $(addBtnImage).appendTo(accordianBtn);
+        // // add image - addBtn (data-lat, data-long, data-name)
+        // var addBtnImage = $("<img>", {
+        //     class: "addBtn",
+        //     src: "../img/plus-img.png"
+        // });
+        // // append image to accordianBtn
+        // $(addBtnImage).appendTo(accordianBtn);
         // append button to brewSidebar
         $("#brewSidebar").append(accordianBtn);
     },
