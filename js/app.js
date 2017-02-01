@@ -38,6 +38,7 @@ $("#locationsubmit").on("click", function(event) {
 
     // get the location from user
     var loc = $("#locationform").val().trim();
+    $("#locationform").val("");
     // create regular expression objects for testing search input
     var alpNum = new RegExp(/^[a-z0-9]+$/i);
     if(alpNum.test(loc)) {
@@ -53,7 +54,6 @@ $("#locationsubmit").on("click", function(event) {
         // invalid search
         $("#brewSidebar").text("invalid search, please try again");
     }
-    $("#locationform").text("");
 });
 
 

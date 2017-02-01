@@ -166,8 +166,8 @@ var breweryAPI = {
                     }
                 }
                 catch (e) {
-                    console.log(e);
                     $("#brewSidebar").text("no results found");
+                    console.log(e);
                 }
             });
             callback();
