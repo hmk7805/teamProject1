@@ -155,7 +155,7 @@ var breweryAPI = {
         }).done(function(result){
             // empty sidebar
             $("#brewSidebar").empty();
-            //console.log(result.data);
+            console.log(result.data);
             // iterate results
             result.data.forEach(function(e) {
                 try {
@@ -169,7 +169,7 @@ var breweryAPI = {
                 }
                 catch (e) {
                     $("#brewSidebar").text("no results found");
-                    console.log(e);
+                    console.log(e.message);
                 }
             });
             callback();
