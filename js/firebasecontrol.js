@@ -102,3 +102,9 @@ $(".previousTrip").on("click", function() {
 
 // fb.addTrip returns key
 //$('document').ready(fb.getPreviousTrip(fb.addTrip("test trip 23")));
+
+// for testing
+var counter = (function () {
+    var count = 24;
+    return function () { return count += 1; }
+})();
