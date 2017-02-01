@@ -6,13 +6,6 @@ function accordion() {
     var i;
     for (i = 0; i < acc.length; i++) {
         acc[i].onclick = function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
 
             //// Grabs data from UI
             var bName = $(this).data("name");
@@ -21,6 +14,15 @@ function accordion() {
             var id = $(this).data("id");
             // addBrewery icon
             addBrewery(bName, addr, zip, id);
+
+            // display info panel
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
         }
     }
 };

@@ -115,7 +115,7 @@ function addBrewery(name, addr, zip, id) {
 
 
     var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({ 'address': _addr + " " + _zip }, function() {
+    geocoder.geocode({ 'address': _addr + " " + _zip }, function(results, status) {
         // if successful
         if (status == google.maps.GeocoderStatus.OK) {
             // get location from result
