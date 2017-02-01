@@ -12,6 +12,8 @@ var fb = {
     start: function start () {
         // listener to get all trips from firebase
         fb.tripsRef.on("value", function(snapshot) {
+            // clear div
+            $("#previousTrips").empty();
             //console.log(snapshot.val());
             for(e in snapshot.val()) {
                 console.log(e, snapshot.val()[e].name);

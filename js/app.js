@@ -38,14 +38,22 @@ $("#locationsubmit").on("click", function(event) {
 
     // get the location from user
     var loc = $("#locationform").val().trim();
-    // and draw a google map of the given location
-    placeEmptyMap(loc);
+    $("#locationform").val("");
+    // create regular expression objects for testing search input
+    var alpNum = new RegExp(/^[a-z0-9]| +$/i);
+    if(alpNum.test(loc)) {
+        // and draw a google map of the given location
+        placeEmptyMap(loc);
 
-    // get breweries
-    breweryAPI.setURL(name = loc);
-    breweryAPI.makeCall(accordion);
+        // get breweries
+        breweryAPI.setURL(name = loc);
+        breweryAPI.makeCall(accordion);
 
-    accordion();
+        accordion();
+    } else {
+        // invalid search
+        $("#brewSidebar").text("invalid search, please try again");
+    }
 });
 
 

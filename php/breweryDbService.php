@@ -7,11 +7,21 @@
 
     $apikey = 'f0479b27c9f9d643b57d9bd53db8937f';
 
-    $params = array(
-        "locality" => $_GET["locality"],
-        "locationType" => $_GET["locationType"],
-        "order" => $_GET["order"],
-    );
+    if(isset($_GET["locality"])) {
+        $params = array(
+            "locality" => $_GET["locality"],
+            "locationType" => $_GET["locationType"],
+            "order" => $_GET["order"],
+            "isClosed" => $_GET["isClosed"]
+        );
+    } elseif(isset($_GET["postalCode"])) {
+        $params = array(
+            "postalCode" => $_GET["postalCode"],
+            "locationType" => $_GET["locationType"],
+            "order" => $_GET["order"],
+            "isClosed" => $_GET["isClosed"]
+        );
+    }
 
     $bdb = new Pintlabs_Service_Brewerydb($apikey);
     $bdb->setFormat('json'); // if you want to get php back.  'xml' and 'php' are also valid options.

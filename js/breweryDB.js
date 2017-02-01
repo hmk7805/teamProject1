@@ -11,16 +11,45 @@ var breweryAPI = {
     endpoint: "locations",
     // *** api functions ***
     // set parameters, with default options
+    // setURLLocation
+    // setURLLocality
+    // setURLPostalCode
+
+    //locality, postalCode, inPlanning, isClosed, locationType, status, order
+
     setURL: function setURL(name = breweryAPI.name,
                             type = breweryAPI.type,
                             order = breweryAPI.order,
                             endpoint = breweryAPI.endpoint) {
-        breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
-            'locality': name,
-            'locationType': type,
-            'order': order,
-            'endpoint': endpoint
-        });
+        // create regular expression objects for testing search input
+        var numReg = new RegExp('^[0-9]+$');
+        var alpReg = new RegExp('^[a-zA-z]+$');
+        // try test for zip then city, if fail, log error
+        console.log('name ' + name);
+        try {
+            if(numReg.test(name)) {
+                breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
+                    'postalCode': name,
+                    'locationType': type,
+                    'order': order,
+                    'endpoint': endpoint,
+                    'isClosed': 'N'
+                });
+            } else if(alpReg.test(name)) {
+                breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
+                    'locality': name,
+                    'locationType': type,
+                    'order': order,
+                    'endpoint': endpoint,
+                    'isClosed': 'N'
+                });
+            } else {
+                breweryAPI.queryURL = "";
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
     },
     // reset queryURL
     resetURL: function resetURL() {
@@ -68,7 +97,7 @@ var breweryAPI = {
     },
     // create div, add info, append to sidebar
     makeInfoDiv: function makeInfoDiv(e) {
-        console.log(e["isClosed"], e["brewery"]["description"]);
+        //console.log(e["isClosed"], e["brewery"]["description"]);
         // e["locationTypeDisplay"]
         // create variables for brewery info items
         var address = e["streetAddress"];
@@ -126,16 +155,27 @@ var breweryAPI = {
         }).done(function(result){
             // empty sidebar
             $("#brewSidebar").empty();
+            //console.log(result.data);
             // iterate results
-            result.data.forEach(function(e) {
-                // if location is not closed permanently
-                console.log(e["isClosed"]);
-                if(e["isClosed"] === "N") {
-                    // call functions to build sidebar
-                    breweryAPI.makeAccordionBtn(e);
-                    breweryAPI.makeInfoDiv(e);
-                }
-            });
+            try {
+                result.data.forEach(function(e) {
+                    try {
+                        // if location is not closed permanently and has an address
+                        //console.log(e["isClosed"], e["streetAddress"].length);
+                        if(e["isClosed"] === "N" && e["streetAddress"].length > 0) {
+                            // call functions to build sidebar
+                            breweryAPI.makeAccordionBtn(e);
+                            breweryAPI.makeInfoDiv(e);
+                        }
+                    }
+                    catch (e) {
+                        console.log(e.message);
+                    }
+                });
+            } catch (e) {
+                $("#brewSidebar").text("no results found");
+                console.log(e.message);
+            }
             callback();
         // if there is an error
         }).fail(function(err) {
