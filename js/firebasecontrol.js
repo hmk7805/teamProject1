@@ -16,13 +16,33 @@ var fb = {
             for(e in snapshot.val()) {
                 console.log(e, snapshot.val()[e].name);
                 // create trips with data-tripId attribute
+                
+                // new button - accordionBtn tourBtn
+                var accordianBtn = $("<button>", {
+                    class: "accordionBtn tourBtn",
+                    "data-tripId": e
+                });
+                // faviconHop image - faviconHop
+                var hopImg = $("<img>", {
+                    class: "faviconHop",
+                    src: "img/hop2.png"
+                });
+                // append image to accordianBtn
+                $(hopImg).appendTo(accordianBtn);
+                // h6 - brewName
+                var breweryName = $("<h6>", {
+                    class: "brewName",
+                    text: snapshot.val()[e].name
+                });
+                // append name to accordianBtn
+                $(breweryName).appendTo(accordianBtn);
+                // append button to brewSidebar
+              //  $("#brewSidebar").append(accordianBtn);
 
-                // button class accordion tourBtn
-                    // img class faviconHop
-                    // h4 class tourName
-
-                // div class panel tourInfoDiv
-                    // p class tourInfoName
+                // new div - panel tourInfoDiv
+                var panelDiv = $("<div>", {
+                    class: "panel tourInfoDiv"
+                });
                     // p class tourInfoCity
                     // a class tourInfoLink
                     // ul
@@ -32,6 +52,8 @@ var fb = {
                             // };
                             // breweryAPI.makeSingleCall(brewery);
                             // li i.name - linked to website
+                // append div to brewSidebar
+              //  $("#brewSidebar").append(accordianBtn);
             }
         });
     },
