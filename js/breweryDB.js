@@ -155,23 +155,27 @@ var breweryAPI = {
         }).done(function(result){
             // empty sidebar
             $("#brewSidebar").empty();
-            console.log(result.data);
+            //console.log(result.data);
             // iterate results
-            result.data.forEach(function(e) {
-                try {
-                    // if location is not closed permanently
-                    //console.log(e["isClosed"], e["streetAddress"].length);
-                    if(e["isClosed"] === "N") {
-                        // call functions to build sidebar
-                        breweryAPI.makeAccordionBtn(e);
-                        breweryAPI.makeInfoDiv(e);
+            try {
+                result.data.forEach(function(e) {
+                    try {
+                        // if location is not closed permanently
+                        console.log(e["isClosed"], e["streetAddress"].length);
+                        if(e["isClosed"] === "N") {
+                            // call functions to build sidebar
+                            breweryAPI.makeAccordionBtn(e);
+                            breweryAPI.makeInfoDiv(e);
+                        }
                     }
-                }
-                catch (e) {
-                    $("#brewSidebar").text("no results found");
-                    console.log(e.message);
-                }
-            });
+                    catch (e) {
+                        console.log(e.message);
+                    }
+                });
+            } catch (e) {
+                $("#brewSidebar").text("no results found");
+                console.log(e.message);
+            }
             callback();
         // if there is an error
         }).fail(function(err) {
