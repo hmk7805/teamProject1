@@ -7,7 +7,7 @@ body {
 	position: relative;
 	background-color: #fbb03b;
 	overflow: auto;
-	height: 350px;
+	height: 300px;
 	border-color: black;
 	border: 20px;
 	border-radius: 5%;
@@ -18,10 +18,11 @@ body {
 
 }
 .faviconHop {
-/*small hop in brewerySidebar beside brewName*/
+	height:20px;
 }
 .brewName {
 	display:inline;
+	padding: 5px;
 }
 .addBtn {
 	height:32px;
@@ -31,9 +32,10 @@ body {
 .brewBtn { 
 	text-align: center;
 	background-color: #FFFFFF;
-	border-radius: 5%;
 	width:100%;
 	margin-bottom: 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 .brewExpand {
 	width: 100%;
@@ -54,6 +56,11 @@ body {
 	width: 100%;
 }
 
+#custom1 {
+	margin-top:80px;
+	margin-bottom:100px;
+}
+
 /*brewery sidebar styling end*/
 
 /*Accordian*/
@@ -67,12 +74,6 @@ div.panel {
 /*accordian end*/
 
 @media  screen and (max-width: 400px) {
-
-	.map-canvas {
-	height:100px;
-	width: 100%;
-	margin-top: 100px;
-}
 
 }
 

@@ -23,34 +23,38 @@
 
 <!-- Accordian Side Bar mock up with classes and IDs there is css (styleBV.css) and js (line 34) that are necessary for this -->
 <div id='brewSidebar'>
-    <button class='accordion brewBtn'>
+    <button class='accordionBtn brewBtn'>
         <img src='img/hop2.png' alt='hop' class='faviconHop'>
-        <h4 class='brewName'>Brewery Name</h4>
-        <img src='img/plus-img.png' alt='Add a Brewery' class='addBtn'>
+        <h6 class='brewName'>Brewery Name</6>
     </button>
-    <div class='panel brewInfoDiv'>
-        <img src='' alt = 'breweryDB IconLarge' class = 'brewLogo'>
-        <p class='brewInfo'>Address</p>
-        <p class='brewInfo'>Hours 00AM-00PM</p>
-        <a href='websiteURL'><p class = 'brewInfo'>Website Url</p></a>
-    </div>
-    <button class='accordion brewBtn'>
+    <div class="panel brewInfoDiv"><img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png"><p class="brewAddress">401 North Tryon Street</p><p class="brewHours">Sun: 11:00 AM - 11:00 PM
+Mon-Sat: 11:00 AM - 2:00  AM</p><a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a></div>
+    <button class='accordionBtn brewBtn'>
         <img src='img/hop2.png' alt='hop' class='faviconHop'>
-        <h4 class='brewName'>Brewery Name</h4>
-        <img src='img/plus-img.png' alt='Add a Brewery' class='addBtn'>
+        <h6 class='brewName'>Brewery Name</6>
+    </button>
+    <div class="panel brewInfoDiv"><img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png"><p class="brewAddress">401 North Tryon Street</p><p class="brewHours">Sun: 11:00 AM - 11:00 PM
+Mon-Sat: 11:00 AM - 2:00  AM</p><a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a></div>
+    <button class='accordionBtn brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h6 class='brewName'>Brewery Name</6>
+    </button>
+    <div class="panel brewInfoDiv"><img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png"><p class="brewAddress">401 North Tryon Street</p><p class="brewHours">Sun: 11:00 AM - 11:00 PM
+Mon-Sat: 11:00 AM - 2:00  AM</p><a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a></div>
+    <button class='accordionBtn brewBtn'>
+        <img src='img/hop2.png' alt='hop' class='faviconHop'>
+        <h6 class='brewName'>Brewery Name</6>
+    </button>
+    <div class="panel brewInfoDiv"><img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png"><p class="brewAddress">401 North Tryon Street</p><p class="brewHours">Sun: 11:00 AM - 11:00 PM
+Mon-Sat: 11:00 AM - 2:00  AM</p><a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a></div>
+</div>
 
-    </button>
-    <div class='panel'>
-        <img src='' alt = 'breweryDB IconLarge' class = 'brewLogo'>
-        <p class='brewInfo'>Address</p>
-        <p class='brewInfo'>Hours 00AM-00PM</p>
-        <a href='websiteURL'><p class = 'brewInfo'>Website Url</p></a>
-    </div>
-</div>   
+
+    
 
 <script>
 // accordian
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("accordionBtn");
 var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].onclick = function() {
