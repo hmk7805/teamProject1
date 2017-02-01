@@ -33,8 +33,7 @@ var breweryAPI = {
                     'locationType': type,
                     'order': order,
                     'endpoint': endpoint,
-                    'isClosed': 'N',
-                    'status': 'active'
+                    'isClosed': 'N'
                 });
             } else if(alpReg.test(name)) {
                 breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
@@ -42,8 +41,7 @@ var breweryAPI = {
                     'locationType': type,
                     'order': order,
                     'endpoint': endpoint,
-                    'isClosed': 'N',
-                    'status': 'active'
+                    'isClosed': 'N'
                 });
             }
         }
