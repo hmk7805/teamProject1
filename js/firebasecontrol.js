@@ -4,6 +4,9 @@
 // create a variable to reference the database
 var database = firebase.database();
 
+// for testing
+var initCount;
+
 var fb = {
     // create database reference objects
     databaseRef: database.ref(),
@@ -14,7 +17,7 @@ var fb = {
         fb.tripsRef.on("value", function(snapshot) {
             // clear div
             $("#previousTrips").empty();
-            //console.log(snapshot.val());
+            initCount = snapshot.val().length;
             for(e in snapshot.val()) {
                 console.log(e, snapshot.val()[e].name);
                 // create trips with data-tripId attribute
@@ -102,9 +105,3 @@ $(".previousTrip").on("click", function() {
 
 // fb.addTrip returns key
 //$('document').ready(fb.getPreviousTrip(fb.addTrip("test trip 23")));
-
-// for testing
-var counter = (function () {
-    var count = 24;
-    return function () { return count += 1; }
-})();

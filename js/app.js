@@ -65,7 +65,7 @@ $("#createBtn").on("click", function(event) {
     event.preventDefault();
 
     // grab location array from firdb
-    fb.addTrip("test trip " + counter);
+    fb.addTrip("test trip " + (initCount + 1));
 
     //draw the route mapping all chosen breweries
     calcRoute(breweryList);
