@@ -29,7 +29,7 @@ var breweryAPI = {
         try {
             if(numReg.test(name)) {
                 breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
-                    'postalCode': name,
+                    'postalCode': '28217',
                     'locationType': type,
                     'order': order,
                     'endpoint': endpoint,
