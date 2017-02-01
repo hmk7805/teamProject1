@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" class="wow-animation">
-
 <head>
     <!-- Site Title -->
     <title>BrewVentures</title>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
@@ -18,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-96x96.png">
@@ -26,9 +25,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- maps api -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSgYOYzgofj7bAwN-wpscNlytp9CGSv0E"></script>
 
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,600,700" rel="stylesheet">
@@ -38,414 +34,399 @@
     <link rel="stylesheet" href="css/styleBV.css">
 
 </head>
-
 <body class="bg-image">
 
-    <div id="page-preloader">
-        <div class="contpre">
-            <div class="loader">
-                <div class="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-            </div>
+<div id="page-preloader">
+  <div class="contpre">
+    <div class="loader">
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+    </div>
+  </div>
+</div> 
+
+<!-- The Main Wrapper -->
+<div class="main-wrapper">
+
+  <!--/////////////////////////// HEADER \\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  <header  class="main-header">
+    <!-- Nav -->
+    <div class="k-nav all-light">
+      <div class="k-nav-toggle"><span></span></div>
+      <div class="k-nav-outside">
+        <div class="k-nav-inside">
+          <a href="./">
+            <img src="img/brewventureslogo.png" width="200" height="200" alt=""/>
+          </a>
+          <ul class="k-nav-links">
+            <li class="active"><a href="#" data-nav-to="#home"><span>HOME</span></a></li>
+            <li><a data-nav-to="#two" href="#"><span>FEATURES</span></a></li>
+            <li><a data-nav-to="#three" href="#"><span>CREATE</span></a></li>
+            <li><a data-nav-to="#four" href="#"><span>PREVIOUS TRIPS</span></a></li>
+            <li><a data-nav-to="#five" href="#"><span>ABOUT</span></a></li>
+            <li><a data-nav-to="#six" href="#"><span>CONTACT</span></a></li>
+          </ul>
+          <hr class="divider hide-md">
+          <div class="text-left text-md-right pl-20 pl-md-0">
+            <h6 class="small">EMAIL US NOW</h6>
+            <h5><a href="#"><span class="icon icon-md fa fa-share text-middle"></span> <span>info@brewventures.com</span></a></h5>
+          </div>
         </div>
+      </div>
     </div>
+  </header>
+     
+  <!--/////////////////////////// CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  <main class="main-container">
 
-    <!-- The Main Wrapper -->
-    <div class="main-wrapper">
-
-        <!--/////////////////////////// HEADER \\\\\\\\\\\\\\\\\\\\\\\\\\\-->
-        <header class="main-header">
-            <!-- Nav -->
-            <div class="k-nav all-light">
-                <div class="k-nav-toggle"><span></span></div>
-                <div class="k-nav-outside">
-                    <div class="k-nav-inside">
-                        <a href="./">
-                            <img src="img/brewventureslogo.png" width="200" height="200" alt="" />
-                        </a>
-                        <ul class="k-nav-links">
-                            <li class="active"><a href="#" data-nav-to="#home"><span>HOME</span></a></li>
-                            <li><a data-nav-to="#two" href="#"><span>FEATURES</span></a></li>
-                            <li><a data-nav-to="#three" href="#"><span>CREATE</span></a></li>
-                            <li><a data-nav-to="#four" href="#"><span>PREVIOUS TRIPS</span></a></li>
-                            <li><a data-nav-to="#five" href="#"><span>ABOUT</span></a></li>
-                            <li><a data-nav-to="#six" href="#"><span>CONTACT</span></a></li>
-                        </ul>
-                        <hr class="divider hide-md">
-                        <div class="text-left text-md-right pl-20 pl-md-0">
-                            <h6 class="small">EMAIL US NOW</h6>
-                            <h5><a href="#"><span class="icon icon-md fa fa-share text-middle"></span> <span>info@brewventures.com</span></a></h5>
-                        </div>
-                    </div>
-                </div>
+    <!--========== Header section ==========-->
+    <section id="home" data-vide-bg="video/background-video">
+      <div class="first-section all-light">
+        <div class="container text-md-left">
+          <div class="row">
+            <div class="col-md-9 parallax-text">
+              <h2 class="ls-50">Create your own</h2>                
+              <h1 class="ls-50">Custom Curated<br class="hide show-md-block">Brewery Tour</h1>
+              <h3 class="ls-50">ready to start your <span class="text-primary">BREW</span> Venture?</h3>
+              <div class="btn-block">
+                <a data-scroll-to="#two" href="#" class="btn btn-md btn-default">Learn more <span class="icon icon-sm fa fa-angle-double-down"></span></a>
+              </div>
             </div>
-        </header>
+          </div>
+        </div>
+        <a data-scroll-to="#two" href="#" class="scroll-btn icon icon-sm fa fa-angle-down"></a>
+      </div>
+    </section>
 
-        <!--/////////////////////////// CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\-->
-        <main class="main-container">
+    <!--======== Info section ========-->
+    <section id="two" class="p-80 bg-soft">
+      <div class="container">
+        <div>
+          <h2>Why should you choose <span class="text-primary"><br><span style="color:black;">Brew</span>Ventures?</span></h2>
+          <hr class="divider">
+          <p>We help you make your own custom brewery tour <br class="hide show-md-block"> complete with directions and reccomended stops along the way. </p>
+        </div>
+        <div class="row flex-center mt-40">
+          <div class="col-sm-6 col-md-3">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-1.png" alt=""></span>
+              <h4>Saves You Time</h4>
+              <p>Our brewery web app will save you time by elimiating the hasle of figuring out where to drink.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-sm-0">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-2.png" alt=""></span>
+              <h4>Local Breweries</h4>
+              <p>We find breweries near you and help you create a custom beer curated tour of your area.</p>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-md-0">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-3.png" alt=""></span>
+              <h4>Detailed Directions</h4>
+              <p>Regardless of what mode of transportation you are taking, we got you covered.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-md-0">
+            <div class="icon-block">
+              <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-4.png" alt=""></span>
+              <h4>Share Your Trip</h4>
+              <p>Show your friends and family what places you visisted. Share to Facebook or Twitter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!--========== Header section ==========-->
-            <section id="home" data-vide-bg="video/background-video">
-                <div class="first-section all-light">
-                    <div class="container text-md-left">
-                        <div class="row">
-                            <div class="col-md-9 parallax-text">
-                                <h2 class="ls-50">Create your own</h2>
-                                <h1 class="ls-50">Custom Curated<br class="hide show-md-block">Brewery Tour</h1>
-                                <h3 class="ls-50">ready to start your <span class="text-primary">BREW</span> Venture?</h3>
-                                <div class="btn-block">
-                                    <a data-scroll-to="#two" href="#" class="btn btn-md btn-default">Learn more <span class="icon icon-sm fa fa-angle-double-down"></span></a>
-                                </div>
-                            </div>
-                        </div>
+    <!--========== Content section ==========-->
+    <section id="three" class="p-60 p-lg-80 bg-soft">
+      <div class="container">
+        <div>
+          <h2>Brew<span class="text-primary">Ventures</span></h2>
+          <hr class="divider">
+          <p>Create your own custom brewery tour</p>
+        </div>
+        <div class="row flex-center text-md-left mt-40">
+          <div class="col-md-6 col-lg-8 flex-item-middle text-center">
+            <div style="height:100%" id="map-canvas">
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-6 col-lg-4 mt-30 mt-md-0 wow fadeInLeft">
+            <div>
+              <h5><span class="icon icon-lg text-primary text-middle"></span> <span class="pl-20 text-middle"></span></h5>
+              <p class="mt-10"></p>
+            </div>
+            <div class="mt-30 mt-md-40">
+            <center>
+              <h5><span class="icon icon-lg text-primary text-middle fa fa-clock-o"></span> <span class="pl-20 text-middle">Enter Your Location</span></h5>
+                  <form>
+                    <div class="form-group">
+                    <input type="input" class="form-control" id="locationform" placeholder="Location">
+                    <br>
+                    <button type="submit" id="locationsubmit" class="btn btn-default">Submit</button></center>
                     </div>
-                    <a data-scroll-to="#two" href="#" class="scroll-btn icon icon-sm fa fa-angle-down"></a>
+                  </form>
+            </div>
+            <!-- Add z index functionality -->
+            <div id="brewSidebar"></div>
+            <button id="createBtn" class="btn">Create Trip </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== CTA ==========-->
+    <section id="four" class="p-60 bg-primary">
+      <div class="container all-light">
+        <div class="row flex-center">
+          <div class="col-md-9 col-lg-10 flex-item-middle">
+          <input type="input" class="form-control" id="locationform" placeholder="Enter your email to share your Brewery Itinerary">
+          </div>
+          <div class="col-md-3 col-lg-2 flex-item-middle mt-20 mt-md-0">
+            <a data-scroll-to="#subscr" href="#" class="btn btn-md btn-default">Send</a>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <!--========== Previous Trips ==========-->
+    <section>
+      <div class=" text-md-left" style="background-color:white;">
+        <div class="row flex-center">
+          <div class="col-md-6 tourMap">
+            <img src="img/beercheers.jpg" class="full-height-img" width="913" height="511" alt="">
+          </div>
+          <div class="col-md-6">
+            <div class="inset-1 tourSidebar">
+              <h3>Previous Trips<br class="hide show-md-block">from our users</h3>
+              <p class="mt-20 mt-md-30">Our users have toured different breweries from around the world. Below are some of the top trips created by people just like you! Click the links to see their journeys.</p>
+              <ul class="marked-list mt-20 mt-md-30">
+                <li><span><a>Charlotte Brewery Tour</a></span></li>
+                <li><span><a>Raleigh Brewery Tour</a></span></li>
+                <li><span><a>Asheville Brewery Tour</a></span></li>
+              </ul>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--========== About Section ==========-->
+    <section class="p-60 p-lg-80 bg-soft" id="five">
+      <div class="container">
+        <div>
+          <h2>our team <span class="text-primary">members</span></h2>
+          <hr class="divider">
+          <p>We work hard so you can play harder</p>
+        </div>
+        <center>
+        <div class="row text-md-left mt-40">
+          <div class="col-sm-6 col-md-3 hover-img">
+            <div class="show-inline-block icon-line">
+              <a href="https://www.linkedin.com/in/tylerolli/" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="https://github.com/TylerOlli" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/tylerolli.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Tyler<br>Olli</h5>
+              <p class="big">UI / UX Designer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-sm-0 hover-img" data-wow-delay="0.1s">
+            <div class="show-inline-block icon-line">
+              <a href="https://www.linkedin.com/in/hmking/" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="https://github.com/hmk7805" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/hannahking.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Hannah<br>King</h5>
+              <p class="big">Web Developer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 mt-30 mt-md-0 hover-img" data-wow-delay="0.2s">
+            <div class="show-inline-block icon-line">
+              <a href="https://www.linkedin.com/in/jntolman/" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="https://github.com/jntolman" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/jarretttolman.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Jarrett<br>Tolman</h5>
+              <p class="big">API Specialist</p>
+            </div>
+          </div>
+              <div class="col-sm-6 col-md-3 mt-30 mt-sm-0 hover-img" data-wow-delay="0.1s">
+            <div class="show-inline-block icon-line">
+              <a href="#" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
+              <a href="https://github.com/rayalsgit" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
+            </div>
+            <div class="show-inline-block">
+              <div class="overflow-hid"><img src="img/rayal.jpg" width="200" height="358" alt=""></div>
+              <h5 class="mt-20 text-uppercase">Rayal<br>B.</h5>
+              <p class="big">Javascript Engineer</p>
+            </div>
+          </div>
+</center>
+        </div>
+      </div>
+    </section> 
+
+    <!--========== Testimonials section ==========-->
+    <section class="parallax-bg p-80" data-parallax="scroll" data-speed="0.4" data-image-src="img/index-08.jpg">
+      <div class="container all-light">
+        <div>
+          <h2>What our <span class="text-primary">users</span> say</h2>
+          <hr class="divider">
+        </div>
+        <div class="row flex-center text-md-left">
+          <div class="col-md-10">
+            <div class="slider-1">
+              <div class="row flex-center">
+                <div class="col-md-2 text-center">
+                  <img src="img/beerdrinker.jpg" width="127" height="127" alt="">
+                  <h6 class="mt-20">Peter Woods</h6>
                 </div>
-            </section>
-
-            <!--======== Info section ========-->
-            <section id="two" class="p-80 bg-soft">
-                <div class="container">
-                    <div>
-                        <h2>Why should you choose <span class="text-primary"><br><span style="color:black;">Brew</span>Ventures?</span>
-                        </h2>
-                        <hr class="divider">
-                        <p>We help you make your own custom brewery tour <br class="hide show-md-block"> complete with directions and reccomended stops along the way. </p>
-                    </div>
-                    <div class="row flex-center mt-40">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="icon-block">
-                                <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-1.png" alt=""></span>
-                                <h4>Saves You Time</h4>
-                                <p>Our brewery web app will save you time by elimiating the hasle of figuring out where to drink.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mt-30 mt-sm-0">
-                            <div class="icon-block">
-                                <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-2.png" alt=""></span>
-                                <h4>Local Breweries</h4>
-                                <p>We find breweries near you and help you create a custom beer curated tour of your area.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mt-30 mt-md-0">
-                            <div class="icon-block">
-                                <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-3.png" alt=""></span>
-                                <h4>Detailed Directions</h4>
-                                <p>Regardless of what mode of transportation you are taking, we got you covered.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mt-30 mt-md-0">
-                            <div class="icon-block">
-                                <span class="icon icon-lg icon-primary icon-circle"><img src="img/icon-4.png" alt=""></span>
-                                <h4>Share Your Trip</h4>
-                                <p>Show your friends and family what places you visisted. Share to Facebook or Twitter.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-7">
+                <br>
+                  <p>"I just went on my last adventure and used BrewVentures as my tour guide. I had the most amazing time and would highly reccomend the service to anyone who loves beer. They have seriously crafted something great"</p>
                 </div>
-            </section>
-
-            <!--========== Content section ==========-->
-            <section id="three" class="p-60 p-lg-80 bg-soft">
-                <div class="container">
-                    <div>
-                        <h2>Brew<span class="text-primary">Ventures</span></h2>
-                        <hr class="divider">
-                        <p>Create your own custom brewery tour</p>
-                    </div>
-                    <div class="row flex-center text-md-left mt-40">
-                        <div class="col-md-6 col-lg-8 flex-item-middle text-center">
-                            <div style="width: 100; height:500px; " id="map-canvas">
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-md-6 col-lg-4 mt-30 mt-md-0 wow fadeInLeft">
-                            <div>
-                                <h5><span class="icon icon-lg text-primary text-middle"></span> <span class="pl-20 text-middle"></span></h5>
-                                <p class="mt-10"></p>
-                            </div>
-                            <div class="mt-30 mt-md-40">
-                                <center>
-                                    <h5><span class="icon icon-lg text-primary text-middle fa fa-clock-o"></span> <span class="pl-20 text-middle">Enter Your Location</span></h5>
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="input" class="form-control" id="locationform" placeholder="Location">
-                                            <br>
-                                            <button type="submit" id="locationsubmit" class="btn btn-default">Submit</button></center>
-                                </div>
-                                </form>
-                            </div>
-                            <!-- Add z index functionality -->
-                            <div id="brewSidebar"></div>
-                            <button id="createBtn" class="btn">Create Trip </button>
-                        </div>
-                    </div>
+              </div>
+              <div class="row flex-center">
+                <div class="col-md-2 text-center">
+                  <img src="img/index-10.jpg" width="127" height="127" alt="">
+                  <h6 class="mt-20">Amanda Davis</h6>
                 </div>
-            </section>
-
-            <!--========== CTA ==========-->
-            <section class="p-60 bg-primary">
-                <div class="container all-light">
-                    <div class="row flex-center">
-                        <div class="col-md-9 col-lg-10 flex-item-middle">
-                            <h3>Enter your email to share your Brewery Itinerary</h3>
-                        </div>
-                        <div class="col-md-3 col-lg-2 flex-item-middle mt-20 mt-md-0">
-                            <a data-scroll-to="#subscr" href="#" class="btn btn-md btn-default">Send</a>
-                        </div>
-                    </div>
+                <div class="col-md-7">
+                <br>
+                  <p>This website is amazing! I was having a tough time mapping out where I wanted to go this weekend. My mind was put at ease when I was able to plan out everything with the touch of the button.</p>
                 </div>
-            </section>
-
-            <!--========== Previous Trips ==========-->
-            <section>
-                <div class=" text-md-left">
-                    <div class="row flex-center">
-                        <div class="col-md-6 tourMap">
-                            <img src="img/beercheers.jpg" class="full-height-img" width="913" height="511" alt="">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="inset-1 tourSidebar">
-                                <h3>Previous Trips<br class="hide show-md-block">from our users</h3>
-                                <p class="mt-20 mt-md-30">Our users have toured different breweries from around the world. Below are some of the top trips created by people just like you! Click the links to see their journeys.</p>
-                                <ul class="marked-list mt-20 mt-md-30">
-                                    <li><span><a>Charlotte Brewery Tour</a></span></li>
-                                    <li><span><a>Raleigh Brewery Tour</a></span></li>
-                                    <li><span><a>Asheville Brewery Tour</a></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="row flex-center">
+                <div class="col-md-2 text-center">
+                  <img src="img/index-11.jpg" width="127" height="127" alt="">
+                  <h6 class="mt-20">Jeff Silverman</h6>
                 </div>
-            </section>
-
-            <!--========== About Section ==========-->
-            <section class="p-60 p-lg-80 bg-soft" id="five">
-                <div class="container">
-                    <div>
-                        <h2>our team <span class="text-primary">members</span></h2>
-                        <hr class="divider">
-                        <p>We work hard so you can play</p>
-                    </div>
-                    <center>
-                        <div class="row text-md-left mt-40">
-                            <div class="col-sm-6 col-md-3 hover-img">
-                                <div class="show-inline-block icon-line">
-                                    <a href="https://www.linkedin.com/in/tylerolli/" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
-                                    <a href="https://github.com/TylerOlli" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
-                                </div>
-                                <div class="show-inline-block">
-                                    <div class="overflow-hid"><img src="img/tylerolli.jpg" width="200" height="358" alt=""></div>
-                                    <h5 class="mt-20 text-uppercase">Tyler<br>Olli</h5>
-                                    <p class="big">UI / UX Designer</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3 mt-30 mt-sm-0 hover-img" data-wow-delay="0.1s">
-                                <div class="show-inline-block icon-line">
-                                    <a href="https://www.linkedin.com/in/hmking/" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
-                                    <a href="https://github.com/hmk7805" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
-                                </div>
-                                <div class="show-inline-block">
-                                    <div class="overflow-hid"><img src="img/hannahking.jpg" width="200" height="358" alt=""></div>
-                                    <h5 class="mt-20 text-uppercase">Hannah<br>King</h5>
-                                    <p class="big">Web Developer</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3 mt-30 mt-md-0 hover-img" data-wow-delay="0.2s">
-                                <div class="show-inline-block icon-line">
-                                    <a href="https://www.linkedin.com/in/jntolman/" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
-                                    <a href="https://github.com/jntolman" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
-                                </div>
-                                <div class="show-inline-block">
-                                    <div class="overflow-hid"><img src="img/jarretttolman.jpg" width="200" height="358" alt=""></div>
-                                    <h5 class="mt-20 text-uppercase">Jarrett<br>Tolman</h5>
-                                    <p class="big">API Specialist</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3 mt-30 mt-sm-0 hover-img" data-wow-delay="0.1s">
-                                <div class="show-inline-block icon-line">
-                                    <a href="#" class="show-block"><span class="icon icon-sm fa fa-linkedin"></span></a>
-                                    <a href="https://github.com/rayalsgit" class="show-block"><span class="icon icon-sm fa fa-github"></span></a>
-                                </div>
-                                <div class="show-inline-block">
-                                    <div class="overflow-hid"><img src="img/rayal.jpg" width="200" height="358" alt=""></div>
-                                    <h5 class="mt-20 text-uppercase">Rayal<br>B.</h5>
-                                    <p class="big">Software Engineer</p>
-                                </div>
-                            </div>
-                    </center>
-                    </div>
+                <div class="col-md-7">
+                  <p>Bookmark this site immediately! I was visiting some friends in New York this past weekend. I was so overwhelmed with how many places there were to go. Thankfully I pulled BrewVentures on my phone. I was able to create a list of locations to visit within minutes. I would highly recommend the service to anyone who enjoys craft beer and local breweries.</p>
                 </div>
-            </section>
-
-            <!--========== Testimonials section ==========-->
-            <section id="four" class="parallax-bg p-80" data-parallax="scroll" data-speed="0.4" data-image-src="img/index-08.jpg">
-                <div class="container all-light">
-                    <div>
-                        <h2>What our <span class="text-primary">clients</span> say</h2>
-                        <hr class="divider">
-                    </div>
-                    <div class="row flex-center text-md-left">
-                        <div class="col-md-10">
-                            <div class="slider-1">
-                                <div class="row flex-center">
-                                    <div class="col-md-2 text-center">
-                                        <img src="img/beerdrinker.jpg" width="127" height="127" alt="">
-                                        <h6 class="mt-20">Peter Woods</h6>
-                                        <p>Fellow Beer Drinker</p>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <p>"I just went on my last adventure and used BrewVentures as my tour guide. I had the most amazing time and would highly reccomend the service to anyone who loves beer."</p>
-                                    </div>
-                                </div>
-                                <div class="row flex-center">
-                                    <div class="col-md-2 text-center">
-                                        <img src="img/index-10.jpg" width="127" height="127" alt="">
-                                        <h6 class="mt-20">Eric Shaw</h6>
-                                        <p>Lead Manager</p>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                    </div>
-                                </div>
-                                <div class="row flex-center">
-                                    <div class="col-md-2 text-center">
-                                        <img src="img/index-11.jpg" width="127" height="127" alt="">
-                                        <h6 class="mt-20">Eric Shaw</h6>
-                                        <p>Lead Manager</p>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-            <!--========== Accordion section ==========-->
-            <section class="p-60 bg-gray">
-                <div class="container">
-                    <div>
-                        <h2>FAQ</h2>
-                        <hr class="divider">
-                        <p>Here are some of our most asked questions.</p>
-                    </div>
-                    <div class="row flex-center mt-40">
-                        <div class="col-sm-8 col-md-5">
-                            <div class="accordion">
-                                <h6 class="accordion-title active">What API's do you use?<span class="arrow"></span></h6>
-                                <div class="accordion-inner active">
-                                    <p>We use the BreweryDB API to get information on local breweries near you, then we use Google Map's own API in order to display that information on a map with directions.</p>
-                                </div>
+    <!--========== Accordion section ==========-->
+    <section class="p-60 bg-gray">
+      <div class="container">
+        <div>
+          <h2>FAQ</h2>
+          <hr class="divider">    
+          <p>Here are some of our most asked questions.</p>
+        </div>
+        <div class="row flex-center mt-40">
+          <div class="col-sm-8 col-md-5">
+            <div class="accordion">
+              <h6 class="accordion-title active">What API's do you use?<span class="arrow"></span></h6>
+              <div class="accordion-inner active">
+                <p>We use the BreweryDB API to get information on local breweries near you, then we use Google Map's own API in order to display that information on a map with directions.</p>
+              </div>
 
-                                <h6 class="accordion-title">How accurate is the site?<span class="arrow"></span></h6>
-                                <div class="accordion-inner">
-                                    <p>We use the same technology that Google does, so we can guarentee pin point accuracy on all of the maps and directions on our site.</p>
-                                </div>
+              <h6 class="accordion-title">How accurate is the site?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>We use the same technology that Google does, so we can guarentee pin point accuracy on all of the maps and directions on our site.</p>
+              </div>
 
-                                <h6 class="accordion-title">How do you reccomend breweries?<span class="arrow"></span></h6>
-                                <div class="accordion-inner">
-                                    <p>When you enter your location, we pull from a massive database of breweries from around the world. We find the best places that are closest to your geographic location.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-md-5 mt-20 mt-md-0">
-                            <div class="accordion">
-                                <h6 class="accordion-title">How many breweries can I add to my trip?<span class="arrow"></span></h6>
-                                <div class="accordion-inner">
-                                    <p>You can add an unlimited amount of breweries to your itinerary. Keeping that in mind, please drink responsiblity.</p>
-                                </div>
+              <h6 class="accordion-title">How do you reccomend breweries?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>When you enter your location, we pull from a massive database of breweries from around the world. We find the best places that are closest to your geographic location.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-5 mt-20 mt-md-0">
+            <div class="accordion">
+              <h6 class="accordion-title">How many breweries can I add to my trip?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>You can add an unlimited amount of breweries to your itinerary. Keeping that in mind, please drink responsiblity.</p>
+              </div>
 
-                                <h6 class="accordion-title active">What if my brewery isn't on the list?<span class="arrow"></span></h6>
-                                <div class="accordion-inner active">
-                                    <p>We are always trying to offer more to our users. Please email us at info@brewventures.com and we will work on adding your brewery to the database that we use.</p>
-                                </div>
+              <h6 class="accordion-title active">What if my brewery isn't on the list?<span class="arrow"></span></h6>
+              <div class="accordion-inner active">
+                <p>We are always trying to offer more to our users. Please email us at info@brewventures.com and we will work on adding your brewery to the database that we use.</p>
+              </div>
 
-                                <h6 class="accordion-title">What are your plans for the future?<span class="arrow"></span></h6>
-                                <div class="accordion-inner">
-                                    <p>Our team plans on expanding our feature set through the use of innovation and new web technologies. In the near future we hope to build our own BrewVentures iPhone and Andriod app.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+              <h6 class="accordion-title">What are your plans for the future?<span class="arrow"></span></h6>
+              <div class="accordion-inner">
+                <p>Our team plans on expanding our feature set through the use of innovation and new web technologies. In the near future we hope to build our own BrewVentures iPhone and Andriod app.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!--========== Slider section ==========-->
-            <section class="p-60">
-                <div class="container">
-                    <div>
-                        <h2>Featured Breweries</h2>
-                        <hr class="divider">
-                        <p>Check out some of our favorite breweries from around the world.</p>
-                    </div>
-                    <div class="slider-2">
-                        <div>
-                            <a href="#" class="show-block"><img src="img/brand-1.png" width="150" height="40" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="#" class="show-block"><img src="img/brand-2.png" width="150" height="40" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="#" class="show-block"><img src="img/brand-3.png" width="150" height="40" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="#" class="show-block"><img src="img/brand-4.png" width="150" height="40" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="#" class="show-block"><img src="img/brand-5.png" width="150" height="40" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <!--========== Slider section ==========-->
+    <section class="p-60" style="background-color:white;">
+      <div class="container">
+        <div>
+          <h2>Featured Breweries</h2>
+          <hr class="divider">
+          <p>Check out some of our favorite breweries from around the world.</p>
+        </div>
+        <div class="slider-2">
+          <div><a href="#" class="show-block"><img src="img/sierranevadalogo.jpg" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/brooklynbrewery.jpg" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/birdsong.jpg" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/dogfish.jpg" width="150" height="40" alt=""></a></div>
+          <div><a href="#" class="show-block"><img src="img/newbelgiumbrewing.png" width="150" height="40" alt=""></a></div>
+        </div>
+      </div>
+    </section>
 
-            <!--========== Contact section ==========-->
-            <section class="p-80 bg-gray z-index-high" id="six">
-                <div class="container ">
-                    <h2>Get in touch</h2>
-                    <hr class="divider">
-                    <p>Send us a message! We would love to hear about your BrewVenture.</p>
-                    <div class="row flex-center contact-data">
-                        <div class="col-sm-4">
-                            <div><span class="icon icon-md fa fa-map-marker"></span></div>
-                            <h6>Location:</h6>
-                            <p>Charlotte, North Carolina</p>
-                        </div>
-                        <div class="col-sm-4 mt-20 mt-sm-0">
-                            <div><span class="icon icon-md fa fa-envelope-o"></span></div>
-                            <h6>Email:</h6>
-                            <p><a href="#">info@brewventures.com</a></p>
-                        </div>
-                    </div>
-                    <form class="contact-form js-form">
-                        <div class="row flex-center">
-                            <div class="col-sm-8 col-md-5">
-                                <div class="form-group"><input autocomplete="off" type="text" name="name" class="form-control required" placeholder="Full Name"></div>
-                                <div class="form-group"><input autocomplete="off" type="email" name="email" class="form-control required" placeholder="Email address"></div>
-                                <div class="form-group"><input autocomplete="off" type="text" name="phone" class="form-control required" placeholder="Phone number"></div>
-                            </div>
-                            <div class="col-sm-8 col-md-5 mt-30 mt-md-0">
-                                <div class="form-group height100"><textarea name="message" class="form-control required" placeholder="Your message"></textarea></div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-md btn-primary mt-30">Send message</button>
-                    </form>
-                </div>
-            </section>
+    <!--========== Contact section ==========-->
+    <section class="p-80 bg-gray z-index-high" id="six">
+      <div class="container ">
+        <h2>Get in touch</h2>
+        <hr class="divider">
+        <p>Send us a message! We would love to hear about your BrewVenture.</p>
+        <div class="row flex-center contact-data">
+          <div class="col-sm-4">
+            <div><span class="icon icon-md fa fa-map-marker"></span></div>
+            <h6>Location:</h6>
+            <p>Charlotte, North Carolina</p>
+          </div>
+          <div class="col-sm-4 mt-20 mt-sm-0">
+            <div><span class="icon icon-md fa fa-envelope-o"></span></div>
+            <h6>Email:</h6>
+            <p><a href="#">info@brewventures.com</a></p>
+          </div>
+        </div>
+        <form class="contact-form js-form">
+          <div class="row flex-center">
+            <div class="col-sm-8 col-md-5">
+              <div class="form-group"><input autocomplete="off" type="text" name="name" class="form-control required" placeholder="Full Name"></div>
+              <div class="form-group"><input autocomplete="off" type="email" name="email" class="form-control required" placeholder="Email address"></div>
+              <div class="form-group"><input autocomplete="off" type="text" name="phone" class="form-control required" placeholder="Phone number"></div>
+            </div>
+            <div class="col-sm-8 col-md-5 mt-30 mt-md-0">
+              <div class="form-group height100"><textarea name="message" class="form-control required" placeholder="Your message"></textarea></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-md btn-primary mt-30">Send message</button>
+        </form>
+      </div>
+    </section>
 
-        </main>
+  </main>
 
-    </div>
+</div>
 
     <!-- Core Scripts -->
     <script src="js/minified.js"></script>
@@ -474,5 +455,4 @@
     <script src="js/firebasecontrol.js"></script>
 
 </body>
-
 </html>
