@@ -101,3 +101,59 @@ function calcRoute(breweryList) {
         });
     }
 };
+
+
+// add brewery icon to map.
+function addBrewery(name, addr, zip, id) {
+    // Grabs input
+    var bName = name;
+    var _addr = addr;
+    var _zip = zip;
+    var _id = id;
+    //var loc = new google.maps.LatLng(lat, lng);
+
+
+
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': _addr + " " + _zip }, function() {
+        // if successful
+        if (status == google.maps.GeocoderStatus.OK) {
+            // get location from result
+            const result = results[0].geometry.location;
+            // get the lat and lng
+            const lat = result.lat();
+            const lng = result.lng();
+            const latLng = {
+                lat,
+                lng
+            };
+            // city = latLng;
+            // create default map options
+            var mapOptions = {
+                zoom: 10,
+                center: latLng
+            };
+
+            // place a marker on the map 
+            placeMarker(map, latLng, bName);
+
+            // Creates local "temporary" object for holding brewery data
+            var newBrewery = {
+                name: bName,
+                loc: latLng,
+                id: _id
+            };
+
+            // add to brewery array
+            breweryList.push(newBrewery);
+
+        } else {
+            console.log("Could not find this location " + status);
+        }
+
+    });
+
+
+
+
+};

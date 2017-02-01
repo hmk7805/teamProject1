@@ -16,10 +16,11 @@ function accordion() {
 
             //// Grabs data from UI
             var bName = $(this).data("name");
-            var lat = $(this).data("lat");
-            var lng = $(this).data("long");
+            var addr = $(this).data("address");
+            var zip = $(this).data("zip");
+            var id = $(this).data("id");
             // addBrewery icon
-            addBrewery(bName, lat, lng);
+            addBrewery(bName, addr, zip, id);
         }
     }
 };
@@ -45,26 +46,7 @@ $("#locationsubmit").on("click", function(event) {
     accordion();
 });
 
-// add brewery icon to map.
-function addBrewery(name, lat, lng) {
-    // Grabs input
-    var bName = name;
-    var lat = lat;
-    var lng = lng;
-    var loc = new google.maps.LatLng(lat, lng);
 
-    // Creates local "temporary" object for holding brewery data
-    var newBrewery = {
-        name: bName,
-        loc: loc
-    };
-
-    // add to brewery array
-    breweryList.push(newBrewery);
-
-    // place a marker on the map 
-    placeMarker(map, loc, bName);
-};
 
 
 //handler for create button to draw the route and create a trip.
