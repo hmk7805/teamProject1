@@ -30,15 +30,15 @@ var breweryAPI = {
     makeAccordionBtn: function makeAccordionBtn(e) {
         // create variables for info items
         var name = e["brewery"]["name"];
-        var lat = e["latitude"];
-        var long = e["longitude"];
+        var address = e["streetAddress"];
+        var zip = e["postalCode"];
         console.log(e);
         var id = e["id"];
         // new button - accordionBtn brewBtn
         var accordianBtn = $("<button>", {
             class: "accordionBtn brewBtn",
-            "data-lat": lat,
-            "data-long": long,
+            "data-address": address,
+            "data-zip": zip,
             "data-name": name,
             "data-id": id
         });
