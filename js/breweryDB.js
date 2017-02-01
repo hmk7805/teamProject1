@@ -129,7 +129,7 @@ var breweryAPI = {
             // iterate results
             result.data.forEach(function(e) {
                 // if location is not closed permanently
-                console.log(e["isClosed"]);
+                console.log(e["isClosed"], e["streetAddress"]);
                 if(e["isClosed"] === "N") {
                     // call functions to build sidebar
                     breweryAPI.makeAccordionBtn(e);
