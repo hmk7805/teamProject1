@@ -7,11 +7,11 @@ body {
 	position: relative;
 	background-color: #fbb03b;
 	overflow: auto;
-	height: 400px;
-	width: 35%;
+	height: 350px;
 	border-color: black;
 	border: 20px;
 	border-radius: 5%;
+	margin-bottom: 20px;
 }
 .brewDiv {
 	padding-top:20px;
@@ -49,6 +49,11 @@ body {
 }
 
 
+.map-canvas {
+	height:500px;
+	width: 100%;
+}
+
 /*brewery sidebar styling end*/
 
 /*Accordian*/
@@ -60,3 +65,30 @@ div.panel {
     transition: max-height 0.2s ease-out;
 }
 /*accordian end*/
+
+@media  screen and (max-width: 400px) {
+
+	.map-canvas {
+	height:100px;
+	width: 100%;
+	margin-top: 100px;
+}
+
+}
+
+@media  screen and (max-width: 640px) {
+
+}
+
+@media  screen and (max-width: 768px) {
+
+}
+
+@media  screen and (max-width: 987px) {
+
+}
+
+@media  screen and (max-width: 1024px) {
+
+
+}
