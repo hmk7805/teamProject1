@@ -17,7 +17,7 @@ var fb = {
         fb.tripsRef.on("value", function(snapshot) {
             // clear div
             $("#previousTrips").empty();
-            initCount = snapshot.val().numChildren();
+            initCount = snapshot.numChildren();
             for(e in snapshot.val()) {
                 console.log(e, snapshot.val()[e].name);
                 // create trips with data-tripId attribute
