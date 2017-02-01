@@ -23,7 +23,7 @@ var breweryAPI = {
                             endpoint = breweryAPI.endpoint) {
         // create regular expression objects for testing search input
         var numReg = new RegExp('^[0-9]+$');
-        var alpReg = new RegExp('^[a-zA-z]+$');
+        var alpReg = new RegExp('^[a-zA-z]| +$');
         // try test for zip then city, if fail, log error
         console.log('name ' + name);
         try {
