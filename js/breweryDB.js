@@ -95,7 +95,7 @@ var breweryAPI = {
     },
     // create div, add info, append to sidebar
     makeInfoDiv: function makeInfoDiv(e) {
-        console.log(e["isClosed"], e["brewery"]["description"]);
+        //console.log(e["isClosed"], e["brewery"]["description"]);
         // e["locationTypeDisplay"]
         // create variables for brewery info items
         var address = e["streetAddress"];
@@ -153,12 +153,12 @@ var breweryAPI = {
         }).done(function(result){
             // empty sidebar
             $("#brewSidebar").empty();
-            console.log(result.data);
+            //console.log(result.data);
             // iterate results
             result.data.forEach(function(e) {
                 try {
                     // if location is not closed permanently
-                    console.log(e["isClosed"], e["streetAddress"].length);
+                    //console.log(e["isClosed"], e["streetAddress"].length);
                     if(e["isClosed"] === "N") {
                         // call functions to build sidebar
                         breweryAPI.makeAccordionBtn(e);
@@ -167,6 +167,10 @@ var breweryAPI = {
                 }
                 catch (e) {
                     console.log(e);
+                    var noResults = $("<p>", {
+                        text: "no results found"
+                    });
+                    $(noResults).appendTo("#brewSidebar");
                 }
             });
             callback();
