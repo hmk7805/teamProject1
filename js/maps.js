@@ -51,7 +51,7 @@ function placeMarker(map, location, name) {
     // create a marker object using location, name
     var marker = new google.maps.Marker({
         position: location,
-        icon: "./../teamProject1/img/hop2.png",
+        icon: "../img/hop2.png",
         map: map
     });
     // create a infowindow for tooltip
