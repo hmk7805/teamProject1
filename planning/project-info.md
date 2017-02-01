@@ -10,7 +10,8 @@
 2. Tuesday 1/24
 3. Thursday 1/26
 4. Saturday 1/28
-5. Tuesday 1/31 - presentation & demo
+5. Tuesday 1/31
+6. Thursday 2/2 - presentation & demo
 
 ## Task
 * Use 2 APIs
