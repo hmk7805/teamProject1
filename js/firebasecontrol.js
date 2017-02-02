@@ -37,6 +37,7 @@ var fb = {
                 // div accordion-inner tourExpand
                 var innerDiv = $("<div>", {
                     class: "accordion-inner tourExpand",
+                    style: "display:none"
                 });
                 // p tourName
                 var tName = $("<p>", {
