@@ -19,10 +19,17 @@ var trip = {
         // populate html template
     urlParams: new URLSearchParams(window.location.search),
     loadPage: function() {
+        // get tripId from url
         var params = trip.urlParams.get('tripId');
-        $('tourDiv').text(params.name);
+        // get trip object from firebase
         fb.getPreviousTrip(params);
+        //console.log(tripObj);
+        // var para = document.createElement('p');
+        // var text = document.createTextNode(params.toString());
+        // var div = document.getElementById('tourDiv');
+        // para.appendChild(text);
+        // div.appendChild(para);
     }
 };
 
-trip.loadPage();
+$(document).ready(trip.loadPage());

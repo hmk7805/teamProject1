@@ -72,4 +72,5 @@ $("#createBtn").on("click", function(event) {
 
 });
 
+// move this to index?
 $(document).ready(placeEmptyMap("charlotte"));

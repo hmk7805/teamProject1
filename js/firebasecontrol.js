@@ -103,13 +103,27 @@ var fb = {
     },
     // function to get one trip from database
     getPreviousTrip: function getPreviousTrip (tripId) {
+        var tripObj = {};
         database.ref("/trips/" + tripId).once("value").then(function(snapshot) {
-            console.log(snapshot.val());
+            //tripObj.name = snapshot.val().name;
+            //console.log(snapshot.val());
+            var para = document.createElement('p');
+            var text = document.createTextNode(snapshot.val().name);
+            var div = document.getElementById('tourDiv');
+            para.appendChild(text);
+            snapshot.val().stops.forEach(function(e) {
+                var brewName = document.createTextNode(e.name);
+                //console.log(e.name);
+                para.appendChild(brewName);
+            });
+            div.appendChild(para);
             // load breweryList
-            //breweryList = snapshot.val().stops;
+            breweryList = snapshot.val().stops;
             //breweryList.push(snapshot.val().name);
             //console.log(breweryList);
+            calcRoute(breweryList);
         });
+        return tripObj;
     },
 };
 
