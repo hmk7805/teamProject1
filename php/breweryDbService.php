@@ -23,10 +23,7 @@
         );
     } elseif(isset($_GET["ids"])) {
         $params = array(
-            "ids" => $_GET["ids"],
-            "locationType" => $_GET["locationType"],
-            "order" => $_GET["order"],
-            "isClosed" => $_GET["isClosed"]
+            "ids" => $_GET["ids"]
         );
 
     $bdb = new Pintlabs_Service_Brewerydb($apikey);

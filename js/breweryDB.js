@@ -180,11 +180,11 @@ var breweryAPI = {
         // create queryURL
         //breweryAPI.queryURL = breweryAPI.url + "/location/" + brewery.id;
         breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
-                    'ids': brewery.id,
-                    'locationType': breweryAPI.type,
-                    'order': breweryAPI.order,
-                    'endpoint': "breweries",
-                    'isClosed': 'N'
+                    'ids': brewery.id
+                    // 'locationType': breweryAPI.type,
+                    // 'order': breweryAPI.order,
+                    // 'endpoint': "breweries",
+                    // 'isClosed': 'N'
                 });
         // make ajax call
         $.ajax({
