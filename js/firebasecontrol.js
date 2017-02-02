@@ -24,7 +24,8 @@ var fb = {
                 // new button - accordion-title tourBtn
                 var accordionBtn = $("<p>", {
                     class: "accordion-title tourBtn",
-                    text: snapshot.val()[e].name
+                    text: snapshot.val()[e].name,
+                    'data-id': e
                 });
                 // faviconHop image - faviconHop
                 var hopImg = $("<img>", {
@@ -56,12 +57,13 @@ var fb = {
                     class: "tourLink",
                     href: "trip.html?" + e,
                     target: "_blank",
-                    text: "Share Your Trip!"
+                    text: "Share Your Trip!",
+                    'data-id': e
                 });
                 $(tLink).appendTo(innerDiv);
                 // append button to brewSidebar
                 $("#previousTrips").append(accordionBtn);
-                $("#previousTrips").append(innerDiv);
+                //$("#previousTrips").append(innerDiv);
 
                     // p class tourInfoCity
                     // a class tourInfoLink
