@@ -179,12 +179,12 @@ var breweryAPI = {
     makeSingleCall: function makeSingleCall(brewery) {
         // create queryURL
         //breweryAPI.queryURL = breweryAPI.url + "/location/" + brewery.id;
-        console.log(brewery);
+        console.log(brewery.id);
         breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
                     'ids': brewery.id,
                     // 'locationType': breweryAPI.type,
                     // 'order': breweryAPI.order,
-                    'endpoint': "breweries"
+                    'endpoint': "locations"
                     // 'isClosed': 'N'
                 });
         // make ajax call
