@@ -4,6 +4,9 @@
 // create a variable to reference the database
 var database = firebase.database();
 
+// for testing
+var initCount;
+
 var fb = {
     // create database reference objects
     databaseRef: database.ref(),
@@ -14,7 +17,7 @@ var fb = {
         fb.tripsRef.on("value", function(snapshot) {
             // clear div
             $("#previousTrips").empty();
-            //console.log(snapshot.val());
+            initCount = snapshot.numChildren();
             for(e in snapshot.val()) {
                 console.log(e, snapshot.val()[e].name);
                 // create trips with data-tripId attribute
@@ -56,6 +59,13 @@ var fb = {
                             // li i.name - linked to website
                 // append div to brewSidebar
               //  $("#previousTrips").append(accordianBtn);
+                // <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
+                // <div class="accordion-inner tourExpand">
+                //     <p class='tourName'>Tour Name</p>
+                //     <p class='tourCity'>Tour City</p>
+                //     <a href='trip.html' target='_blank'><p class = 'tourLink'>URL to Share</p></a>
+                // </div>
+
             }
         });
     },

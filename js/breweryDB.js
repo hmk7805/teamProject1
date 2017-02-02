@@ -10,20 +10,13 @@ var breweryAPI = {
     order: "postalCode",
     endpoint: "locations",
     // *** api functions ***
-    // set parameters, with default options
-    // setURLLocation
-    // setURLLocality
-    // setURLPostalCode
-
-    //locality, postalCode, inPlanning, isClosed, locationType, status, order
-
     setURL: function setURL(name = breweryAPI.name,
                             type = breweryAPI.type,
                             order = breweryAPI.order,
                             endpoint = breweryAPI.endpoint) {
         // create regular expression objects for testing search input
         var numReg = new RegExp('^[0-9]+$');
-        var alpReg = new RegExp('^[a-zA-z]+$');
+        var alpReg = new RegExp('^[a-zA-z]| +$');
         // try test for zip then city, if fail, log error
         console.log('name ' + name);
         try {
