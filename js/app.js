@@ -83,16 +83,16 @@ $("#createBtn").on("click", function(event) {
 
 });
 
-$(".tourBtn").on("click", function(event) {
+$(document).on("click", ".tourBtn", function(event) {
     // prevent event bubbling
     //event.preventDefault();
 
     // get trip id from tourBtn
-    //var tId = $(this).data("id");
-    console.log($(this));
+    var tId = $(this).data("id");
+    // console.log($(this));
 
     // load trip page
-    //window.open("trip.html?tripId=" + tId);
+    window.open("trip.html?tripId=" + tId);
     
 });
 
