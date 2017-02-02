@@ -62,8 +62,19 @@ $("#createBtn").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
 
-    // add trip to firebase, get tripId
-    var tId = fb.addTrip("test trip " + (initCount + 1));
+    // get the trip name from user
+    tripName = $("#tripnameform").val().trim();
+    $("#tripnameform").val("");
+    // create regular expression objects for testing search input
+    var alpNum = new RegExp(/^[a-z0-9]| +$/i);
+    var tId;
+    if(alpNum.test(tripName)) {
+        // add trip to firebase with user name, get tripId
+        tId = fb.addTrip($("#tripnameform").val().trim());
+    } else {
+        // add trip to firebase with generated name, get tripId
+        tId = fb.addTrip("trip " + (initCount + 1));
+    }
 
     //draw the route mapping all chosen breweries
     calcRoute(breweryList);
