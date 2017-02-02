@@ -23,7 +23,7 @@ var fb = {
                 console.log(snapshot.val()[e].name);
                 // new button - accordion-title tourBtn
                 var accordionBtn = $("<p>", {
-                    class: "accodion-title tourBtn",
+                    class: "accordion-title tourBtn",
                     text: snapshot.val()[e].name
                 });
                 // faviconHop image - faviconHop
