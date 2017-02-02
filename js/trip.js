@@ -19,6 +19,7 @@ var trip = {
         // populate html template
     urlParams: new URLSearchParams(window.location.search),
     loadPage: function() {
-        $("tourDiv").text(trip.urlParams);
+        $('tourDiv').text(trip.urlParams.get('tripId'));
+        fb.getPreviousTrip(trip.urlParams.get('tripId'));
     }
 };

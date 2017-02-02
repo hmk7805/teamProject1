@@ -104,9 +104,9 @@ var fb = {
     // function to get one trip from database
     getPreviousTrip: function getPreviousTrip (tripId) {
         database.ref("/trips/" + tripId).once("value").then(function(snapshot) {
-            //console.log(snapshot.val().name);
+            console.log(snapshot.val());
             // load breweryList
-            // breweryList = snapshot.val().stops;
+            //breweryList = snapshot.val().stops;
             //breweryList.push(snapshot.val().name);
             //console.log(breweryList);
         });
