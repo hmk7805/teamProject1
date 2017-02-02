@@ -77,7 +77,7 @@ $(".tourBtn").on("click", function(event) {
     //event.preventDefault();
 
     // get trip id from tourBtn
-    var tId = $(this).data("id");
+    //var tId = $(this).data("id");
     console.log($(this));
 
     // load trip page
