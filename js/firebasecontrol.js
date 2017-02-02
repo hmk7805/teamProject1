@@ -37,18 +37,19 @@ var fb = {
                 // div accordion-inner tourExpand
                 var innerDiv = $("<div>", {
                     class: "accordion-inner tourExpand",
-
                 });
                 // p tourName
                 var tName = $("<p>", {
                     class: "tourName",
                     text: snapshot.val()[e].name
                 });
+                $(tName).appendTo(innerDiv);
                 // p tourCity
                 var tCity = $("<p>", {
-                    class: tourCity,
+                    class: "tourCity",
                     text: snapshot.val()[e].location
                 });
+                $(tCity).appendTo(innerDiv);
                 // a tourLink with data-tripId attribute
                 var tLink = $("<a>", {
                     class: "tourLink",
@@ -56,7 +57,7 @@ var fb = {
                     target: "_blank",
                     text: "Share Your Trip!"
                 });
-
+                $(tLink).appendTo(innerDiv);
                 // append button to brewSidebar
                 $("#previousTrips").append(accordionBtn);
 
