@@ -62,7 +62,7 @@ $("#createBtn").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
 
-    // grab location array from firdb
+    // add trip to firebase, get tripId
     var tId = fb.addTrip("test trip " + (initCount + 1));
 
     //draw the route mapping all chosen breweries
@@ -72,5 +72,18 @@ $("#createBtn").on("click", function(event) {
 
 });
 
-// move this to index?
+$(".tourBtn").on("click", function(event) {
+    // prevent event bubbling
+    //event.preventDefault();
+
+    // get trip id from tourBtn
+    var tId = $(this).data("id");
+    console.log($(this));
+
+    // load trip page
+    //window.open("trip.html?tripId=" + tId);
+    
+});
+
+// initial map load
 $(document).ready(placeEmptyMap("charlotte"));
