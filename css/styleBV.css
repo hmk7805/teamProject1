@@ -19,6 +19,7 @@
 }
 .faviconHop {
 	height:20px;
+	padding:3px;
 }
 .brewName {
 	display:inline;
@@ -61,24 +62,32 @@
 	margin-bottom:100px;
 }
 /*brewery sidebar styling end*/
-
-/*brewery sidebar styling*/
+#custom2{
+	margin-top:25;
+}
+/*tour sidebar styling*/
 .tourSidebar {
 	position: relative;
 	background-color: #fbb03b;
 	overflow: auto;
-	height: 300px;
+	height: 450px;
 	border-color: black;
 	border: 20px;
 	border-radius: 5%;
+	margin-top:25px;
 	margin-bottom: 20px;
+	padding:5px;
 }
 .tourBtn {
 	text-align: center;
-	width:auto;
+	width:45%;
+	margin-left:10px;
+	margin-right:10px;
+	float:left;
 }
 /*Accordian*/
 div.panel {
+	clear:both;
     padding: 0 18px;
     background-color: white;
     max-height: 0;
