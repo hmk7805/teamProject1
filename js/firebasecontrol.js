@@ -60,6 +60,7 @@ var fb = {
                 $(tLink).appendTo(innerDiv);
                 // append button to brewSidebar
                 $("#previousTrips").append(accordionBtn);
+                $("#previousTrips").append(innerDiv);
 
                     // p class tourInfoCity
                     // a class tourInfoLink
