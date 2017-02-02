@@ -59,7 +59,7 @@
 /*brewery sidebar styling end*/
 
 /*brewery sidebar styling*/
-#tourSidebar {
+.tourSidebar {
 	position: relative;
 	background-color: #fbb03b;
 	overflow: auto;
@@ -69,7 +69,7 @@
 	border-radius: 5%;
 	margin-bottom: 20px;
 }
-#tourBtn {
+.tourBtn {
 	text-align: center;
 	width:auto;
 }
