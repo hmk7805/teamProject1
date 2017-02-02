@@ -121,10 +121,12 @@ var fb = {
             snapshot.val().stops.forEach(function(e) {
                 console.log(e);
                 // brewery name
+                var brewDiv = document.createElement('div');
+                brewDiv.setAttribute("id", e.id);
                 var brewName = document.createTextNode(e.name);
-                var brewHeader = document.createElement('h2');
+                var brewHeader = document.createElement('h4');
                 brewHeader.appendChild(brewName);
-                div.appendChild(brewHeader);
+                brewDiv.appendChild(brewHeader);
                 // api call for additional brewery info
                 breweryAPI.makeSingleCall(e);
             });

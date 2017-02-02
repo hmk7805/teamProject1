@@ -195,7 +195,7 @@ var breweryAPI = {
             // update brewery with results
             console.log(result);
             // get tourDiv
-            var div = document.getElementById('tourDiv');
+            var div = document.getElementById(brewery.id);
             // brewery name
             var brewDescription = document.createTextNode(result.description);
             var brewDescPara = document.createElement('p');
