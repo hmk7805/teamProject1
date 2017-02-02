@@ -197,10 +197,15 @@ var breweryAPI = {
             // get tourDiv
             var div = document.getElementById(brewery.id);
             // brewery name
-            var brewDescription = document.createTextNode(result.description);
+            var brewDescription = document.createTextNode(result.data[0].description);
             var brewDescPara = document.createElement('p');
             brewDescPara.appendChild(brewDescription);
             div.appendChild(brewDescPara);
+            var brewLink = document.createElement('a');
+            brewLink.setAttribute('href', result.data[0].website);
+            var brewLinkText = document.createTextNode(result.data[0].website);
+            brewLink.appendChild(brewLinkText);
+            div.appendChild(brewLink);
             // brewery.description = result.description;
         // if there is an error
         }).fail(function(err) {

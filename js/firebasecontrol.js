@@ -64,27 +64,6 @@ var fb = {
                 // append button to brewSidebar
                 $("#previousTrips").append(accordionBtn);
                 //$("#previousTrips").append(innerDiv);
-
-                    // p class tourInfoCity
-                    // a class tourInfoLink
-                    // ul
-                        // for i in [e].stops
-                            // var brewery = {
-                            //     id: i.id,
-                            // };
-                            // breweryAPI.makeSingleCall(brewery);
-                            // li i.name - linked to website
-                // append div to brewSidebar
-              //  $("#previousTrips").append(accordionBtn);
-                
-
-                // <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
-                // <div class="accordion-inner tourExpand">
-                //     <p class='tourName'>Tour Name</p>
-                //     <p class='tourCity'>Tour City</p>
-                //     <a href='trip.html' target='_blank'><p class = 'tourLink'>URL to Share</p></a>
-                // </div>
-
             }
         });
     },
