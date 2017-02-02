@@ -21,7 +21,13 @@
             "order" => $_GET["order"],
             "isClosed" => $_GET["isClosed"]
         );
-    }
+    } elseif(isset($_GET["ids"])) {
+        $params = array(
+            "ids" => $_GET["ids"],
+            "locationType" => $_GET["locationType"],
+            "order" => $_GET["order"],
+            "isClosed" => $_GET["isClosed"]
+        );
 
     $bdb = new Pintlabs_Service_Brewerydb($apikey);
     $bdb->setFormat('json'); // if you want to get php back.  'xml' and 'php' are also valid options.
