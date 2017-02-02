@@ -57,21 +57,18 @@ $("#locationsubmit").on("click", function(event) {
     }
 });
 
-
-
-
 //handler for create button to draw the route and create a trip.
 $("#createBtn").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
 
     // grab location array from firdb
-    fb.addTrip("test trip " + (initCount + 1));
+    var tId = fb.addTrip("test trip " + (initCount + 1));
 
     //draw the route mapping all chosen breweries
     calcRoute(breweryList);
 
-    window.open("trip.html");
+    window.open("trip.html" + tId);
 
 });
 
