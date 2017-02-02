@@ -25,7 +25,8 @@
         $params = array(
             "ids" => $_GET["ids"]
         );
-
+    }
+    
     $bdb = new Pintlabs_Service_Brewerydb($apikey);
     $bdb->setFormat('json'); // if you want to get php back.  'xml' and 'php' are also valid options.
 
