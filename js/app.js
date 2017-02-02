@@ -1,8 +1,9 @@
 var breweryList = [];
+var tripLoc;
 
 // accordian
 function accordion() {
-    var acc = document.getElementsByClassName("accordionBtn");
+    var acc = document.getElementsByClassName(""); //accordionBtn
     var i;
     for (i = 0; i < acc.length; i++) {
         acc[i].onclick = function() {
@@ -37,16 +38,16 @@ $("#locationsubmit").on("click", function(event) {
     breweryList = [];
 
     // get the location from user
-    var loc = $("#locationform").val().trim();
+    tripLoc = $("#locationform").val().trim();
     $("#locationform").val("");
     // create regular expression objects for testing search input
     var alpNum = new RegExp(/^[a-z0-9]| +$/i);
-    if(alpNum.test(loc)) {
+    if(alpNum.test(tripLoc)) {
         // and draw a google map of the given location
-        placeEmptyMap(loc);
+        placeEmptyMap(tripLoc);
 
         // get breweries
-        breweryAPI.setURL(name = loc);
+        breweryAPI.setURL(name = tripLoc);
         breweryAPI.makeCall(accordion);
 
         accordion();
@@ -71,3 +72,5 @@ $("#createBtn").on("click", function(event) {
     calcRoute(breweryList);
 
 });
+
+$(document).ready(placeEmptyMap("charlotte"));
