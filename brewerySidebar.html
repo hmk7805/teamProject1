@@ -20,17 +20,16 @@
 </head>
 <body>
 <!-- Accordian Side Bar mock up with classes and IDs there is css (styleBV.css) and js (line 34) that are necessary for this -->
-<div id='brewSidebar'>
-    <button class='accordionBtn brewBtn'>
-        <img src='img/hop2.png' alt='hop' class='faviconHop'>
-        <h6 class='brewName'>Brewery Name</6>
-    </button>
-    <div class="panel brewInfoDiv">
+<div id='accordion brewSidebar'>    
+    <img src='img/hop2.png' alt='hop' class='faviconHop'>
+    <h6 class='accordion-title brewName' style='display:inline;'> Brewery Name</h6>
+    <div class="accordion-inner brewInfoDiv">
         <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
         <p class="brewAddress">401 North Tryon Street</p>
         <p class="brewHours">Sun: 11:00 AM - 11:00 PM Mon-Sat: 11:00 AM - 2:00  AM</p>
         <a class="brewUrl" href="http://www.rockbottom.com/">http://www.rockbottom.com/</a>
     </div>
+</div>
     <button class='accordionBtn brewBtn'>
         <img src='img/hop2.png' alt='hop' class='faviconHop'>
         <h6 class='brewName'>Brewery Name</6>
@@ -52,7 +51,7 @@
     </div>
     <button class='accordionBtn brewBtn'>
         <img src='img/hop2.png' alt='hop' class='faviconHop'>
-        <h6 class='brewName'>Brewery Name</6>
+        <h6 class='brewName'>Brewery Name</h6>
     </button>
     <div class="panel brewInfoDiv">
         <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
@@ -62,21 +61,21 @@
     </div>
 </div>
 
-<!-- accordians for saved tours -->
+<!-- accordions for saved tours -->
 <div class = 'accordion tourSidebar'>
-    <h4 class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</h4>
+    <img src='img/hop2.png' alt='hop' class='faviconHop click'><p class="tourBtn accordion-title" style = 'display:inline;''>Tour Name</p>
     <div class="accordion-inner tourExpand">
-        <h6 class='tourName'>Tour Name</h6>
+        <p class='tourName'>Tour Name</p>
         <p class='tourCity'>Tour City</p>
         <a href='trip.html' target='_blank'><p class = 'tourLink'>URL to Share</p></a>
     </div>
-    <h4 class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</h4>
+    <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
     <div class="accordion-inner tourExpand">
-        <h6 class='tourName'>Tour Name</h6>
+        <p class='tourName'>Tour Name</p>
         <p class='tourCity'>Tour City</p>
         <a href='trip.html' target='_blank'><span class = 'tourLink'>URL to Share</span></a>
     </div>
-    <h4 class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</h4>
+    <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
     <div class="accordion-inner tourExpand">
         <p class='tourName'>Tour Name</p>
         <p class='tourCity'>Tour City</p>

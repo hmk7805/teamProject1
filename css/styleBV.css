@@ -1,7 +1,3 @@
-body {
-	background-color: black;
-}
-
 /*brewery sidebar styling*/
 #brewSidebar {
 	position: relative;
@@ -60,9 +56,23 @@ body {
 	margin-top:80px;
 	margin-bottom:100px;
 }
-
 /*brewery sidebar styling end*/
 
+/*brewery sidebar styling*/
+#tourSidebar {
+	position: relative;
+	background-color: #fbb03b;
+	overflow: auto;
+	height: 300px;
+	border-color: black;
+	border: 20px;
+	border-radius: 5%;
+	margin-bottom: 20px;
+}
+#tourBtn {
+	text-align: center;
+	width:auto;
+}
 /*Accordian*/
 div.panel {
     padding: 0 18px;
