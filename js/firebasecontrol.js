@@ -42,7 +42,7 @@ var fb = {
                 // append name to accordionBtn
                 $(breweryName).appendTo(accordionBtn);
                 // append button to brewSidebar
-                $("#previousTrips").append(accordianBtn);
+                $("#previousTrips").append(accordionBtn);
 
                 // new div - panel tourInfoDiv
                 var panelDiv = $("<div>", {
