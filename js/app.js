@@ -68,7 +68,7 @@ $("#createBtn").on("click", function(event) {
     //draw the route mapping all chosen breweries
     calcRoute(breweryList);
 
-    window.open("trip.html" + tId);
+    window.open("trip.html?tripId=" + tId);
 
 });
 
