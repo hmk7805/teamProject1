@@ -127,6 +127,7 @@ var fb = {
                 var brewHeader = document.createElement('h4');
                 brewHeader.appendChild(brewName);
                 brewDiv.appendChild(brewHeader);
+                div.appendChild(brewDiv);
                 // api call for additional brewery info
                 breweryAPI.makeSingleCall(e);
             });
