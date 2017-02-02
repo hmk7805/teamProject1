@@ -107,20 +107,31 @@ var fb = {
         database.ref("/trips/" + tripId).once("value").then(function(snapshot) {
             //tripObj.name = snapshot.val().name;
             //console.log(snapshot.val());
-            var para = document.createElement('p');
-            var text = document.createTextNode(snapshot.val().name);
+            
+            // get tourDiv
             var div = document.getElementById('tourDiv');
-            para.appendChild(text);
+
+            // trip title
+            var tripTitle = document.createElement('h3');
+            var tName = document.createTextNode(snapshot.val().name);
+            tripTitle.appendChild(tName);
+            div.appendChild(tripTitle);
+
+            // iterate through stops
             snapshot.val().stops.forEach(function(e) {
+                console.log(e);
+                // brewery name
                 var brewName = document.createTextNode(e.name);
-                //console.log(e.name);
-                para.appendChild(brewName);
+                var brewHeader = document.createElement('h2');
+                brewHeader.appendChild(brewName);
+                div.appendChild(brewHeader);
+                // api call for additional brewery info
+                breweryAPI.makeSingleCall(e);
             });
-            div.appendChild(para);
+
             // load breweryList
             breweryList = snapshot.val().stops;
-            //breweryList.push(snapshot.val().name);
-            //console.log(breweryList);
+            // calculate route and update map
             calcRoute(breweryList);
         });
         return tripObj;

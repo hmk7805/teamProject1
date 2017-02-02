@@ -187,6 +187,13 @@ var breweryAPI = {
         }).done(function(result){
             // update brewery with results
             console.log(result);
+            // get tourDiv
+            var div = document.getElementById('tourDiv');
+            // brewery name
+            var brewDescription = document.createTextNode(result.description);
+            var brewDescPara = document.createElement('p');
+            brewDescPara.appendChild(brewDescription);
+            div.appendChild(brewDescPara);
             // brewery.description = result.description;
         // if there is an error
         }).fail(function(err) {
