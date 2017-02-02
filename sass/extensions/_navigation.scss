@@ -81,7 +81,7 @@ html body .k-nav-links{
       background: #222; 
       @media(min-width: $nav-breakpoint){ 
         color: #fff;
-        background: transparent;
+        background: yellow;
       }
     }
     & + li{
