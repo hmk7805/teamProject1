@@ -23,7 +23,7 @@ var fb = {
                 console.log(snapshot.val()[e].name);
                 // new button - accordion-title tourBtn
                 var accordionBtn = $("<p>", {
-                    class: "accordion-title tourBtn",
+                    class: "tourBtn",
                     text: snapshot.val()[e].name,
                     'data-id': e
                 });
