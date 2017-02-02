@@ -19,13 +19,12 @@ var fb = {
             $("#previousTrips").empty();
             initCount = snapshot.numChildren();
             for(e in snapshot.val()) {
-                console.log(e, snapshot.val()[e].name);
-                // create trips with data-tripId attribute
-                
-                // new button - accordionBtn tourBtn
-                var accordionBtn = $("<button>", {
-                    class: "accordionBtn tourBtn",
-                    "data-tripId": e
+                // create previous trip elements
+                console.log(snapshot.val()[e].name);
+                // new button - accordion-title tourBtn
+                var accordionBtn = $("<p>", {
+                    class: "accordion-title tourBtn",
+                    text: snapshot.val()[e].name
                 });
                 // faviconHop image - faviconHop
                 var hopImg = $("<img>", {
@@ -33,21 +32,36 @@ var fb = {
                     src: "img/hop2.png"
                 });
                 // append image to accordionBtn
-                $(hopImg).appendTo(accordionBtn);
-                // h6 - brewName
-                var breweryName = $("<h6>", {
-                    class: "brewName",
+                $(hopImg).prependTo(accordionBtn);
+
+                // div accordion-inner tourExpand
+                var innerDiv = $("<div>", {
+                    class: "accordion-inner tourExpand",
+                });
+                // p tourName
+                var tName = $("<p>", {
+                    class: "tourName",
                     text: snapshot.val()[e].name
                 });
-                // append name to accordionBtn
-                $(breweryName).appendTo(accordionBtn);
+                $(tName).appendTo(innerDiv);
+                // p tourCity
+                var tCity = $("<p>", {
+                    class: "tourCity",
+                    text: snapshot.val()[e].location
+                });
+                $(tCity).appendTo(innerDiv);
+                // a tourLink with data-tripId attribute
+                var tLink = $("<a>", {
+                    class: "tourLink",
+                    href: "trip.html?" + e,
+                    target: "_blank",
+                    text: "Share Your Trip!"
+                });
+                $(tLink).appendTo(innerDiv);
                 // append button to brewSidebar
                 $("#previousTrips").append(accordionBtn);
+                $("#previousTrips").append(innerDiv);
 
-                // new div - panel tourInfoDiv
-                var panelDiv = $("<div>", {
-                    class: "panel tourInfoDiv"
-                });
                     // p class tourInfoCity
                     // a class tourInfoLink
                     // ul
@@ -58,7 +72,9 @@ var fb = {
                             // breweryAPI.makeSingleCall(brewery);
                             // li i.name - linked to website
                 // append div to brewSidebar
-              //  $("#previousTrips").append(accordianBtn);
+              //  $("#previousTrips").append(accordionBtn);
+                
+
                 // <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
                 // <div class="accordion-inner tourExpand">
                 //     <p class='tourName'>Tour Name</p>
