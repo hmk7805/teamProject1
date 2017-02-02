@@ -70,7 +70,7 @@ $("#createBtn").on("click", function(event) {
     var tId;
     if(alpNum.test(tripName)) {
         // add trip to firebase with user name, get tripId
-        tId = fb.addTrip($("#tripnameform").val().trim());
+        tId = fb.addTrip(tripName);
     } else {
         // add trip to firebase with generated name, get tripId
         tId = fb.addTrip("trip " + (initCount + 1));
