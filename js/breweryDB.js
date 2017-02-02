@@ -179,6 +179,7 @@ var breweryAPI = {
     makeSingleCall: function makeSingleCall(brewery) {
         // create queryURL
         //breweryAPI.queryURL = breweryAPI.url + "/location/" + brewery.id;
+        console.log(brewery);
         breweryAPI.queryURL = breweryAPI.url + "?" + $.param({
                     'ids': brewery.id,
                     // 'locationType': breweryAPI.type,
