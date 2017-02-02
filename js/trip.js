@@ -23,3 +23,5 @@ var trip = {
         fb.getPreviousTrip(trip.urlParams.get('tripId'));
     }
 };
+
+trip.loadPage();
