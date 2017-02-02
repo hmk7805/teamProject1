@@ -57,20 +57,44 @@ $("#locationsubmit").on("click", function(event) {
     }
 });
 
-
-
-
 //handler for create button to draw the route and create a trip.
 $("#createBtn").on("click", function(event) {
     // prevent event bubbling
     event.preventDefault();
 
-    // grab location array from firdb
-    fb.addTrip("test trip " + (initCount + 1));
+    // get the trip name from user
+    tripName = $("#tripnameform").val().trim();
+    $("#tripnameform").val("");
+    // create regular expression objects for testing search input
+    var alpNum = new RegExp(/^[a-z0-9]| +$/i);
+    var tId;
+    if(alpNum.test(tripName)) {
+        // add trip to firebase with user name, get tripId
+        tId = fb.addTrip(tripName);
+    } else {
+        // add trip to firebase with generated name, get tripId
+        tId = fb.addTrip("trip " + (initCount + 1));
+    }
 
     //draw the route mapping all chosen breweries
     calcRoute(breweryList);
 
+    window.open("trip.html?tripId=" + tId);
+
 });
 
+$(".tourBtn").on("click", function(event) {
+    // prevent event bubbling
+    //event.preventDefault();
+
+    // get trip id from tourBtn
+    //var tId = $(this).data("id");
+    console.log($(this));
+
+    // load trip page
+    //window.open("trip.html?tripId=" + tId);
+    
+});
+
+// initial map load
 $(document).ready(placeEmptyMap("charlotte"));
