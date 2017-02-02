@@ -23,7 +23,7 @@ var fb = {
                 // create trips with data-tripId attribute
                 
                 // new button - accordionBtn tourBtn
-                var accordianBtn = $("<button>", {
+                var accordionBtn = $("<button>", {
                     class: "accordionBtn tourBtn",
                     "data-tripId": e
                 });
@@ -32,15 +32,15 @@ var fb = {
                     class: "faviconHop",
                     src: "img/hop2.png"
                 });
-                // append image to accordianBtn
-                $(hopImg).appendTo(accordianBtn);
+                // append image to accordionBtn
+                $(hopImg).appendTo(accordionBtn);
                 // h6 - brewName
                 var breweryName = $("<h6>", {
                     class: "brewName",
                     text: snapshot.val()[e].name
                 });
-                // append name to accordianBtn
-                $(breweryName).appendTo(accordianBtn);
+                // append name to accordionBtn
+                $(breweryName).appendTo(accordionBtn);
                 // append button to brewSidebar
                 $("#previousTrips").append(accordianBtn);
 
@@ -77,6 +77,7 @@ var fb = {
        return fb.tripsRef.push({
             //user: 'test',
             name: tripName,
+            location: tripLoc,
             date: timeNow,
             stops: breweryList
         }).key;
