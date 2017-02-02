@@ -3,7 +3,7 @@ var tripLoc;
 
 // accordian
 function accordion() {
-    var acc = document.getElementsByClassName(""); //accordionBtn
+    var acc = document.getElementsByClassName("accordionBtn");
     var i;
     for (i = 0; i < acc.length; i++) {
         acc[i].onclick = function() {

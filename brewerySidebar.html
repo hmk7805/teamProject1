@@ -21,7 +21,8 @@
 <body>
 <!-- Accordian Side Bar mock up with classes and IDs there is css (styleBV.css) and js (line 34) that are necessary for this -->
 <div id='accordion brewSidebar'>    
-    <h6 class='accordion-title brewName'><img src='img/hop2.png' alt='hop' class='faviconHop'> Brewery Name</h6>
+    <img src='img/hop2.png' alt='hop' class='faviconHop'>
+    <h6 class='accordion-title brewName' style='display:inline;'> Brewery Name</h6>
     <div class="accordion-inner brewInfoDiv">
         <img class="brewLogo" src="https://s3.amazonaws.com/brewerydbapi/brewery/D1UQzj/upload_P4PqC1-squareMedium.png">
         <p class="brewAddress">401 North Tryon Street</p>
@@ -60,9 +61,9 @@
     </div>
 </div>
 
-<!-- accordians for saved tours -->
+<!-- accordions for saved tours -->
 <div class = 'accordion tourSidebar'>
-    <p class="accordion-title tourBtn"><img src='img/hop2.png' alt='hop' class='faviconHop'> Tour Name</p>
+    <img src='img/hop2.png' alt='hop' class='faviconHop click'><p class="tourBtn accordion-title" style = 'display:inline;''>Tour Name</p>
     <div class="accordion-inner tourExpand">
         <p class='tourName'>Tour Name</p>
         <p class='tourCity'>Tour City</p>
