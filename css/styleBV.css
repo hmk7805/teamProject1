@@ -2,6 +2,10 @@
 #brewSidebar {
 	position: relative;
 	background-color: #fbb03b;
+	background: url("../img/BrewVenturesLogos1.png");
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center;
 	overflow: auto;
 	height: 300px;
 	border-color: black;
