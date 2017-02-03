@@ -4,3 +4,8 @@
 **Team Members:** Tyler Olli, Jarrett Tolman, Rayal, Hannah King  
 **Description:** Plan your own local Brew Hop!  
 **APIs:** Google Maps, breweryDB
+
+## Technologies Used
+* BreweryDB and Google Maps APIs 
+* Firebase
+* PHP
